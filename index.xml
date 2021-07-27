@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Phares&#39;s blog</title>
+    <title>Phares</title>
     <link>https://phares-fung.github.io/</link>
-    <description>Recent content on Phares&#39;s blog</description>
+    <description>Recent content on Phares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Tue, 27 Jul 2021 14:57:18 +0800</lastBuildDate><atom:link href="https://phares-fung.github.io/index.xml" rel="self" type="application/rss+xml" />

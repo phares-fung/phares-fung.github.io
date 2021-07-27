@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Phares&#39;s blog</title>
+    <link>http://phares.github.io/</link>
+    <description>Recent content on Phares&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 27 Jul 2021 14:57:18 +0800</lastBuildDate><atom:link href="http://phares.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo博客部署</title>
+      <link>http://phares.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Tue, 27 Jul 2021 14:57:18 +0800</pubDate>
+      
+      <guid>http://phares.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo搭建博客</title>
+      <link>http://phares.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Tue, 27 Jul 2021 11:02:02 +0800</pubDate>
+      
+      <guid>http://phares.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>1. 安装Hugo 目前我仅在Windows环境下安装过hugo，简要介绍下安装过程，其他方式可以参考官方文档。
+1.1 Windows环境下安装   下载hugo二进制文件，解压，将解压后的文件夹名称和文件夹里面的*.exe文件都改为同一个名称，否则hugo无法运行。
+  配置计算机的环境变量，右击计算机-属性-高级系统设置-高级-环境变量-系统变量，找到path，添加hugo路径。
+  在cmd中执行命令hugo verison，进行验证是否安装正确，下图为正确安装情况。
+  2. 建站 2.1 创建项目 进入需要创建站点的文件目录，在此目录打开cmd终端或者git bash终端。
+hugo new site site_name // site_name为需要创建的站点名称然后hugo会自动生成名称为site_name的文件夹以及文件夹中的各种目录。
+   文件夹 说明     archetypes default.md为模板   content 放的是你写的markdown文章   layouts 网站的模板文件   static 图片、css、js等资源   config.toml 网站的配置文件    这样就建立了新的站点，但此时我们的新站点还需要安装主题。
+2.2 安装主题 可以从官方主题库中选择。我使用的主题是m10c。
+直接把这个主题克隆到theme目录，在站点根目录执行命令：
+git clone -b master git@github.com:vaga/hugo-theme-m10c.git themes/m10c或者，初始化项目目录为git仓库，并且把主题仓库作为站点目录的子模块：</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <title>Hugo博客部署 // Phares</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.86.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Phares" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://phares-fung.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo博客部署"/>
+<meta name="twitter:description" content="1. 创建仓库 在github上，创建两个仓库，均为master分支：
+ username.github.io // username为你自己github的用户名，存放编译后的静态文件 blog // 名称随意，存放源文件  2. 推送源文件 在站点根目录，先将编译的静态文件夹public删除，再执行以下命令：
+git initgit remote add origin git@github.com:phares-fung/blog.gitgit add -agit commit -m &quot;first commit&quot;git push -u origin master此时，就将站点源文件上传到github上了。
+3. 推送静态文件 在站点根目录，执行命令，拉取子模块username.github.io到public目录：
+git submodule add -b master git@github.com:phares-fung/phares-fung.github.io.git public之后执行命令，生成静态文件：
+hugo -t m10c最后执行提交命令，将所有文件改动提交到仓库。
+此时可以通过git page网站 https://username.github.io/ 查看博客站点。
+4. 新环境使用  安装hugo 从仓库拉取源文件 修改后执行生成静态文件的命令 提交所有更改 访问git page网站查看  "/>
+
+    <meta property="og:title" content="Hugo博客部署" />
+<meta property="og:description" content="1. 创建仓库 在github上，创建两个仓库，均为master分支：
+ username.github.io // username为你自己github的用户名，存放编译后的静态文件 blog // 名称随意，存放源文件  2. 推送源文件 在站点根目录，先将编译的静态文件夹public删除，再执行以下命令：
+git initgit remote add origin git@github.com:phares-fung/blog.gitgit add -agit commit -m &quot;first commit&quot;git push -u origin master此时，就将站点源文件上传到github上了。
+3. 推送静态文件 在站点根目录，执行命令，拉取子模块username.github.io到public目录：
+git submodule add -b master git@github.com:phares-fung/phares-fung.github.io.git public之后执行命令，生成静态文件：
+hugo -t m10c最后执行提交命令，将所有文件改动提交到仓库。
+此时可以通过git page网站 https://username.github.io/ 查看博客站点。
+4. 新环境使用  安装hugo 从仓库拉取源文件 修改后执行生成静态文件的命令 提交所有更改 访问git page网站查看  " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://phares-fung.github.io/posts/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-27T14:57:18+08:00" />
+<meta property="article:modified_time" content="2021-07-27T14:57:18+08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://phares-fung.github.io/"><img class="app-header-avatar" src="/img/avatar.jpg" alt="Phares" /></a>
+      <h1>Phares</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/posts/">首页</a>
+            -
+          
+          <a class="app-header-menu-item" href="/tecs/">技术</a>
+            -
+          
+          <a class="app-header-menu-item" href="/free/">随笔</a>
+            -
+          
+          <a class="app-header-menu-item" href="/about/">关于</a>
+      </nav>
+      <p>The road through the summit is always difficult and lonely.</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/phares-fung" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>My Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Hugo博客部署</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 27, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h4 id="1-创建仓库">1. 创建仓库</h4>
+<p>在github上，创建两个仓库，均为master分支：</p>
+<ol>
+<li>username.github.io   // username为你自己github的用户名，存放编译后的静态文件</li>
+<li>blog  // 名称随意，存放源文件</li>
+</ol>
+<h4 id="2-推送源文件">2. 推送源文件</h4>
+<p>在站点根目录，先将编译的静态文件夹public删除，再执行以下命令：</p>
+<pre><code>git init
+git remote add origin git@github.com:phares-fung/blog.git
+git add -a
+git commit -m &quot;first commit&quot;
+git push -u origin master
+</code></pre><p>此时，就将站点源文件上传到github上了。</p>
+<h4 id="3-推送静态文件">3. 推送静态文件</h4>
+<p>在站点根目录，执行命令，拉取子模块username.github.io到public目录：</p>
+<pre><code>git submodule add -b master git@github.com:phares-fung/phares-fung.github.io.git public
+</code></pre><p>之后执行命令，生成静态文件：</p>
+<pre><code>hugo -t m10c
+</code></pre><p>最后执行提交命令，将所有文件改动提交到仓库。</p>
+<p>此时可以通过git page网站 <a href="https://phares-fung.github.io/">https://username.github.io/</a> 查看博客站点。</p>
+<h4 id="4-新环境使用">4. 新环境使用</h4>
+<ol>
+<li>安装hugo</li>
+<li>从仓库拉取源文件</li>
+<li>修改后执行生成静态文件的命令</li>
+<li>提交所有更改</li>
+<li>访问git page网站查看</li>
+</ol>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

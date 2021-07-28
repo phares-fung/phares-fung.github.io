@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  <meta name="author" content="Phares.Fung">
+  
+  
+  
+  <link rel="prev" href="https://phares-fung.github.io/2021/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" />
+  
+  <link rel="canonical" href="https://phares-fung.github.io/2021/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           Hugo博客部署 | Phares
+       
+  </title>
+  <meta name="title" content="Hugo博客部署 | Phares">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  
+  
+ 
+
+<script type="application/ld+json">
+ "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/phares-fung.github.io\/"
+    },
+    "articleSection" : "posts",
+    "name" : "Hugo博客部署",
+    "headline" : "Hugo博客部署",
+    "description" : "1. 创建仓库 在github上，创建两个仓库，均为master分支：\n username.github.io \/\/ username为你自己github的用户名，存放编译后的静态文件 blog \/\/ 名称随意，存放源文件  2. 推送源文件 在站点根目录，先将编译的静态文件夹public删除，再执行以下命令：\ngit init\rgit remote add origin git@github.com:phares-fung\/blog.git\rgit add -a\rgit commit -m \u0026quot;first commit\u0026quot;\rgit push -u origin master\r此时，就将站点源文件上传到github上了。\n3. 推送静态文件 在站点根目录，执行命令，拉取子模块username.github.io到public目录：\ngit submodule add -b master git@github.com:phares-fung\/phares-fung.github.io.git public\r之后执行命令，生成静态文件：\nhugo -t m10c\r最后执行提交命令，将所有文件改动提交到仓库。\n此时可以通过git page网站 https:\/\/username.github.io\/ 查看博客站点。\n4. 新环境使用  安装hugo 从仓库拉取源文件 修改后执行生成静态文件的命令 提交所有更改 访问git page网站查看  ",
+    "inLanguage" : "zh-CN",
+    "author" : "Phares.Fung",
+    "creator" : "Phares.Fung",
+    "publisher": "Phares.Fung",
+    "accountablePerson" : "Phares.Fung",
+    "copyrightHolder" : "Phares.Fung",
+    "copyrightYear" : "2021",
+    "datePublished": "2021-07-27 14:57:18 \u002b0800 CST",
+    "dateModified" : "2021-07-27 14:57:18 \u002b0800 CST",
+    "url" : "https:\/\/phares-fung.github.io\/2021\/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2\/",
+    "wordCount" : "60",
+    "keywords" : [  "Phares"]
+}
+</script>
+
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://phares-fung.github.io/">Phares</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-xihuan"></i></a>&nbsp;<a href="https://phares-fung.github.io/">Phares</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/posts/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/tags/" title="">Tags</a>
+                
+                <a class="menu-item" href="/about/" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Hugo博客部署</h1>
+        <div class="post-meta">
+                Written by <a itemprop="name" href="https://phares-fung.github.io/" rel="author">Phares.Fung</a> with ♥ 
+                <span class="post-time">
+                on <time datetime=2021-07-27 itemprop="datePublished">July 27, 2021</time>
+                </span>
+                in
+                
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <h4 id="1-创建仓库">1. 创建仓库</h4>
+<p>在github上，创建两个仓库，均为master分支：</p>
+<ol>
+<li>username.github.io   // username为你自己github的用户名，存放编译后的静态文件</li>
+<li>blog  // 名称随意，存放源文件</li>
+</ol>
+<h4 id="2-推送源文件">2. 推送源文件</h4>
+<p>在站点根目录，先将编译的静态文件夹public删除，再执行以下命令：</p>
+<pre><code>git init
+git remote add origin git@github.com:phares-fung/blog.git
+git add -a
+git commit -m &quot;first commit&quot;
+git push -u origin master
+</code></pre><p>此时，就将站点源文件上传到github上了。</p>
+<h4 id="3-推送静态文件">3. 推送静态文件</h4>
+<p>在站点根目录，执行命令，拉取子模块username.github.io到public目录：</p>
+<pre><code>git submodule add -b master git@github.com:phares-fung/phares-fung.github.io.git public
+</code></pre><p>之后执行命令，生成静态文件：</p>
+<pre><code>hugo -t m10c
+</code></pre><p>最后执行提交命令，将所有文件改动提交到仓库。</p>
+<p>此时可以通过git page网站 <a href="https://phares-fung.github.io/">https://username.github.io/</a> 查看博客站点。</p>
+<h4 id="4-新环境使用">4. 新环境使用</h4>
+<ol>
+<li>安装hugo</li>
+<li>从仓库拉取源文件</li>
+<li>修改后执行生成静态文件的命令</li>
+<li>提交所有更改</li>
+<li>访问git page网站查看</li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Phares.Fung </span>
+                </p>
+            
+           
+             
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://phares-fung.github.io/2021/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/>https://phares-fung.github.io/2021/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/</span>
+            </p>
+            
+             
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> · 
+                <span><a href="https://phares-fung.github.io/">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://phares-fung.github.io/2021/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="prev" rel="prev" title="Hugo搭建博客"><i class="iconfont icon-left"></i>&nbsp;Hugo搭建博客</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+        <span itemprop="copyrightYear">2021 - 2021</span>
+        
+        <span class="with-love">
+    	 <i class="iconfont icon-love"></i> 
+         </span>
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://phares-fung.github.io/">Phares.Fung</a> | </span> 
+         
+
+         
+		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+     </div>
+  </body>
+</html>

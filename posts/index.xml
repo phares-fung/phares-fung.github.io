@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Phares</title>
-    <link>https://phares-fung.github.io/post/</link>
+    <link>https://phares-fung.github.io/posts/</link>
     <description>Recent content in Posts on Phares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 27 Jul 2021 14:57:18 +0800</lastBuildDate><atom:link href="https://phares-fung.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Jul 2021 14:57:18 +0800</lastBuildDate><atom:link href="https://phares-fung.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo博客部署</title>
-      <link>https://phares-fung.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/</link>
+      <link>https://phares-fung.github.io/posts/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/</link>
       <pubDate>Tue, 27 Jul 2021 14:57:18 +0800</pubDate>
       
-      <guid>https://phares-fung.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/</guid>
+      <guid>https://phares-fung.github.io/posts/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/</guid>
       <description>1. 创建仓库 在github上，创建两个仓库，均为master分支：
  username.github.io // username为你自己github的用户名，存放编译后的静态文件 blog // 名称随意，存放源文件  2. 推送源文件 在站点根目录，先将编译的静态文件夹public删除，再执行以下命令：
 git initgit remote add origin git@github.com:phares-fung/blog.gitgit add -agit commit -m &amp;quot;first commit&amp;quot;git push -u origin master此时，就将站点源文件上传到github上了。
@@ -25,10 +25,10 @@ hugo -t m10c最后执行提交命令，将所有文件改动提交到仓库。
     
     <item>
       <title>Hugo搭建博客</title>
-      <link>https://phares-fung.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://phares-fung.github.io/posts/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Tue, 27 Jul 2021 11:02:02 +0800</pubDate>
       
-      <guid>https://phares-fung.github.io/post/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://phares-fung.github.io/posts/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description>1. 安装Hugo 目前我仅在Windows环境下安装过hugo，简要介绍下安装过程，其他方式可以参考官方文档。
 1.1 Windows环境下安装   下载hugo二进制文件，解压，将解压后的文件夹名称和文件夹里面的*.exe文件都改为同一个名称，否则hugo无法运行。
   配置计算机的环境变量，右击计算机-属性-高级系统设置-高级-环境变量-系统变量，找到path，添加hugo路径。

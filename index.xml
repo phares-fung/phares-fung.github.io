@@ -1,20 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Phares on Phares</title>
+    <title>Phares</title>
     <link>https://phares-fung.github.io/</link>
-    <description>Recent content in Phares on Phares</description>
+    <description>Recent content on Phares</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 27 Jul 2021 14:57:18 +0800</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 27 Jul 2021 14:57:18 +0800</lastBuildDate><atom:link href="https://phares-fung.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Posts</title>
-      <link>https://phares-fung.github.io/posts/</link>
+      <title>Hugo博客部署</title>
+      <link>https://phares-fung.github.io/posts/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/</link>
       <pubDate>Tue, 27 Jul 2021 14:57:18 +0800</pubDate>
       
-      <guid>https://phares-fung.github.io/posts/</guid>
-      <description></description>
+      <guid>https://phares-fung.github.io/posts/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/</guid>
+      <description>1. 创建仓库 在github上，创建两个仓库，均为master分支：
+ username.github.io // username为你自己github的用户名，存放编译后的静态文件 blog // 名称随意，存放源文件  2. 推送源文件 在站点根目录，先将编译的静态文件夹public删除，再执行以下命令：
+git initgit remote add origin git@github.com:phares-fung/blog.gitgit add -agit commit -m &amp;quot;first commit&amp;quot;git push -u origin master此时，就将站点源文件上传到github上了。
+3. 推送静态文件 在站点根目录，执行命令，拉取子模块username.github.io到public目录：
+git submodule add -b master git@github.com:phares-fung/phares-fung.github.io.git public之后执行命令，生成静态文件：
+hugo -t m10c最后执行提交命令，将所有文件改动提交到仓库。
+此时可以通过git page网站 https://username.github.io/ 查看博客站点。
+4. 新环境使用  安装hugo 从仓库拉取源文件 修改后执行生成静态文件的命令 提交所有更改 访问git page网站查看  </description>
+    </item>
+    
+    <item>
+      <title>Hugo搭建博客</title>
+      <link>https://phares-fung.github.io/posts/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Tue, 27 Jul 2021 11:02:02 +0800</pubDate>
+      
+      <guid>https://phares-fung.github.io/posts/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>1. 安装Hugo 目前我仅在Windows环境下安装过hugo，简要介绍下安装过程，其他方式可以参考官方文档。
+1.1 Windows环境下安装   下载hugo二进制文件，解压，将解压后的文件夹名称和文件夹里面的*.exe文件都改为同一个名称，否则hugo无法运行。
+  配置计算机的环境变量，右击计算机-属性-高级系统设置-高级-环境变量-系统变量，找到path，添加hugo路径。
+  在cmd中执行命令hugo verison，进行验证是否安装正确，下图为正确安装情况。
+​	  2. 建站 2.1 创建项目 进入需要创建站点的文件目录，在此目录打开cmd终端或者git bash终端。
+hugo new site site_name // site_name为需要创建的站点名称然后hugo会自动生成名称为site_name的文件夹以及文件夹中的各种目录。
+   文件夹 说明     archetypes default.md为模板   content 放的是你写的markdown文章   layouts 网站的模板文件   static 图片、css、js等资源   config.toml 网站的配置文件    这样就建立了新的站点，但此时我们的新站点还需要安装主题。
+2.2 安装主题 可以从官方主题库中选择。我使用的主题是m10c。
+直接把这个主题克隆到theme目录，在站点根目录执行命令：
+git clone -b master git@github.</description>
     </item>
     
   </channel>

@@ -10,11 +10,11 @@
 <link rel="icon" href="/images/favicons/favicon.ico">
 <meta name="keywords" content="" />
 <meta name="description" content="" /><meta itemprop="name" content="Java的线程：Thread和ThreadLocal">
-<meta itemprop="description" content="为什么需要多线程 cpu/内存/IO的巨大性能差异 线程的本质是一段可以执行代码，是操作系统能够进行运算调度的最小单元 多线程的优点 多个执行流，并"><meta itemprop="datePublished" content="2020-08-25T16:38:55+00:00" />
+<meta itemprop="description" content="本文简单介绍了 Java的线程 和 ThreadLocal。"><meta itemprop="datePublished" content="2020-08-25T16:38:55+00:00" />
 <meta itemprop="dateModified" content="2020-08-25T16:38:55+00:00" />
-<meta itemprop="wordCount" content="1355">
+<meta itemprop="wordCount" content="1382">
 <meta itemprop="keywords" content="ThreadLocal,Java线程," /><meta property="og:title" content="Java的线程：Thread和ThreadLocal" />
-<meta property="og:description" content="为什么需要多线程 cpu/内存/IO的巨大性能差异 线程的本质是一段可以执行代码，是操作系统能够进行运算调度的最小单元 多线程的优点 多个执行流，并" />
+<meta property="og:description" content="本文简单介绍了 Java的线程 和 ThreadLocal。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/back-end/java/java-thread-threadlocal/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-08-25T16:38:55+00:00" />
@@ -23,7 +23,7 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Java的线程：Thread和ThreadLocal"/>
-<meta name="twitter:description" content="为什么需要多线程 cpu/内存/IO的巨大性能差异 线程的本质是一段可以执行代码，是操作系统能够进行运算调度的最小单元 多线程的优点 多个执行流，并"/>
+<meta name="twitter:description" content="本文简单介绍了 Java的线程 和 ThreadLocal。"/>
 <meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.4b5e47d31ab1c7fb843bd6414ceacebf0190384f5894dc3148271ff1571354b7.css" integrity="sha256-S15H0xqxx/uEO9ZBTOrOvwGQOE9YlNwxSCcf8VcTVLc=" crossorigin="anonymous"><script src="/js/bundle.min.e32615bc744413570374d5b28e8c02ec03c7b28c31485b6fcc5b6174a08766d9.js" integrity="sha256-4yYVvHREE1cDdNWyjowC7APHsowxSFtvzFthdKCHZtk=" crossorigin="anonymous"></script><script defer src="/js/katex.efb27591b98224b170a1dcd34b1b5ef4a9af1ae7a0ac31442742e776e52b60f9.js" integrity="sha256-77J1kbmCJLFwodzTSxte9KmvGuegrDFEJ0LnduUrYPk=" crossorigin="anonymous"></script>
 </head><body><header><nav class="navbar navbar-expand-xl fixed-top">
   <div class="container">
@@ -198,7 +198,8 @@
   </ul>
 </nav>
   </div>
-</div><div class="post-content mb-3"><h2 id="为什么需要多线程">为什么需要多线程</h2>
+</div><div class="post-content mb-3"><p>本文简单介绍了 <code>Java的线程</code> 和 <code>ThreadLocal</code>。</p>
+<h2 id="为什么需要多线程">为什么需要多线程</h2>
 <ul>
 <li>cpu/内存/IO的巨大性能差异</li>
 <li>线程的本质是一段可以执行代码，是操作系统能够进行运算调度的最小单元</li>
@@ -333,8 +334,7 @@
 <li>并发问题：死锁/竞争条件</li>
 </ul>
 </li>
-</ul>
-</div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+</ul></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
       <div class="modal-header">

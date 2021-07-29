@@ -13,7 +13,7 @@
       <pubDate>Wed, 19 Aug 2020 16:00:00 +0000</pubDate>
       
       <guid>/posts/front-end/node-install-config-win/</guid>
-      <description>下载安装包 Node.js官网下载 安装 双击安装包进行安装，直接点击下一步 此处打勾后点击下一步 选择安装路径后，点击下一步 之后选择默认，点击下一步</description>
+      <description>&lt;p&gt;本文简单介绍了如何在Windows环境下安装 &lt;code&gt;Node.js&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Wed, 19 Aug 2020 10:00:00 +0000</pubDate>
       
       <guid>/posts/back-end/java/jdk-install-online-linux/</guid>
-      <description>创建JDK安装目录 建议将JDK安装在/usr/java文件夹中（可以自己选择目录） 1mkdir -p /usr/local/src/jdk 查看安装程序 如果之前安装过JDK，一定要把之前的卸载</description>
+      <description>&lt;p&gt;本文简单介绍了如何在Linux环境下安装 &lt;code&gt;JDK1.8&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -13,7 +13,7 @@
       <pubDate>Tue, 25 Aug 2020 16:38:55 +0000</pubDate>
       
       <guid>/posts/back-end/java/java-thread-threadlocal/</guid>
-      <description>为什么需要多线程 cpu/内存/IO的巨大性能差异 线程的本质是一段可以执行代码，是操作系统能够进行运算调度的最小单元 多线程的优点 多个执行流，并</description>
+      <description>&lt;p&gt;本文简单介绍了 &lt;code&gt;Java的线程&lt;/code&gt; 和 &lt;code&gt;ThreadLocal&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
   </channel>

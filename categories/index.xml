@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Phares</title>
-    <link>https://phares-fung.github.io/categories/</link>
-    <description>Recent content in Categories on Phares</description>
+    <title>分类 on Phares&#39;s blog</title>
+    <link>/categories/</link>
+    <description>Recent content in 分类 on Phares&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language><atom:link href="https://phares-fung.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2021-{year} Phares Fung. All Rights Reserved.</copyright>
+    <lastBuildDate>Tue, 27 Jul 2021 14:57:18 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>/categories/hugo/</link>
+      <pubDate>Tue, 27 Jul 2021 14:57:18 +0800</pubDate>
+      
+      <guid>/categories/hugo/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

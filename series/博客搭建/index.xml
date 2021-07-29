@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博客搭建 on Phares&#39;s blog</title>
+    <link>/series/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+    <description>Recent content in 博客搭建 on Phares&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2021-{year} Phares Fung. All Rights Reserved.</copyright>
+    <lastBuildDate>Tue, 27 Jul 2021 14:57:18 +0800</lastBuildDate><atom:link href="/series/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo博客部署</title>
+      <link>/posts/hugo/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Tue, 27 Jul 2021 14:57:18 +0800</pubDate>
+      
+      <guid>/posts/hugo/hugo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/</guid>
+      <description>&lt;p&gt;本文展示了如何将 &lt;code&gt;hugo&lt;/code&gt; 博客部署到 &lt;code&gt;github&lt;/code&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugo搭建博客</title>
+      <link>/posts/hugo/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Tue, 27 Jul 2021 11:02:02 +0800</pubDate>
+      
+      <guid>/posts/hugo/hugo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;p&gt;本文展示了如何使用 &lt;code&gt;hugo&lt;/code&gt; 搭建博客。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

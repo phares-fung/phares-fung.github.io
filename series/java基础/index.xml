@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java基础 on Phares&#39;s blog</title>
+    <link>/series/java%E5%9F%BA%E7%A1%80/</link>
+    <description>Recent content in Java基础 on Phares&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2021-{year} Phares Fung. All Rights Reserved.</copyright>
+    <lastBuildDate>Tue, 25 Aug 2020 16:38:55 +0000</lastBuildDate><atom:link href="/series/java%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java的线程：Thread和ThreadLocal</title>
+      <link>/posts/back-end/java/java-thread-threadlocal/</link>
+      <pubDate>Tue, 25 Aug 2020 16:38:55 +0000</pubDate>
+      
+      <guid>/posts/back-end/java/java-thread-threadlocal/</guid>
+      <description>为什么需要多线程 cpu/内存/IO的巨大性能差异 线程的本质是一段可以执行代码，是操作系统能够进行运算调度的最小单元 多线程的优点 多个执行流，并</description>
+    </item>
+    
+  </channel>
+</rss>

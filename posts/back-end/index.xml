@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>后端 on Phares&#39;s blog</title>
+    <link>/posts/back-end/</link>
+    <description>Recent content in 后端 on Phares&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2021-{year} Phares Fung. All Rights Reserved.</copyright>
+    <lastBuildDate>Tue, 25 Aug 2020 16:38:55 +0000</lastBuildDate><atom:link href="/posts/back-end/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java的线程：Thread和ThreadLocal</title>
+      <link>/posts/back-end/java/java-thread-threadlocal/</link>
+      <pubDate>Tue, 25 Aug 2020 16:38:55 +0000</pubDate>
+      
+      <guid>/posts/back-end/java/java-thread-threadlocal/</guid>
+      <description>为什么需要多线程 cpu/内存/IO的巨大性能差异 线程的本质是一段可以执行代码，是操作系统能够进行运算调度的最小单元 多线程的优点 多个执行流，并</description>
+    </item>
+    
+    <item>
+      <title>JDK1.8在线安装（Linux）</title>
+      <link>/posts/back-end/java/jdk-install-online-linux/</link>
+      <pubDate>Wed, 19 Aug 2020 10:00:00 +0000</pubDate>
+      
+      <guid>/posts/back-end/java/jdk-install-online-linux/</guid>
+      <description>创建JDK安装目录 建议将JDK安装在/usr/java文件夹中（可以自己选择目录） 1mkdir -p /usr/local/src/jdk 查看安装程序 如果之前安装过JDK，一定要把之前的卸载</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端 on Phares&#39;s blog</title>
+    <link>/posts/front-end/</link>
+    <description>Recent content in 前端 on Phares&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2021-{year} Phares Fung. All Rights Reserved.</copyright>
+    <lastBuildDate>Wed, 19 Aug 2020 16:00:00 +0000</lastBuildDate><atom:link href="/posts/front-end/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Node.js安装与配置（Windows）</title>
+      <link>/posts/front-end/node-install-config-win/</link>
+      <pubDate>Wed, 19 Aug 2020 16:00:00 +0000</pubDate>
+      
+      <guid>/posts/front-end/node-install-config-win/</guid>
+      <description>下载安装包 Node.js官网下载 安装 双击安装包进行安装，直接点击下一步 此处打勾后点击下一步 选择安装路径后，点击下一步 之后选择默认，点击下一步</description>
+    </item>
+    
+  </channel>
+</rss>

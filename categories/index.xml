@@ -8,11 +8,20 @@
     <copyright>Copyright © 2021-{year} Phares Fung. All Rights Reserved.</copyright>
     <lastBuildDate>Tue, 27 Jul 2021 14:57:18 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo</title>
-      <link>/categories/hugo/</link>
+      <title>工具</title>
+      <link>/categories/%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Tue, 27 Jul 2021 14:57:18 +0800</pubDate>
       
-      <guid>/categories/hugo/</guid>
+      <guid>/categories/%E5%B7%A5%E5%85%B7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>后端</title>
+      <link>/categories/%E5%90%8E%E7%AB%AF/</link>
+      <pubDate>Tue, 25 Aug 2020 16:38:55 +0000</pubDate>
+      
+      <guid>/categories/%E5%90%8E%E7%AB%AF/</guid>
       <description></description>
     </item>
     

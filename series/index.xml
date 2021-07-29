@@ -16,5 +16,23 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Java基础</title>
+      <link>/series/java%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Tue, 25 Aug 2020 16:38:55 +0000</pubDate>
+      
+      <guid>/series/java%E5%9F%BA%E7%A1%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>软件安装</title>
+      <link>/series/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Wed, 19 Aug 2020 16:00:00 +0000</pubDate>
+      
+      <guid>/series/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

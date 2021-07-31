@@ -6,7 +6,16 @@
     <description>Recent content on Phares&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2021-{year} Phares Fung. All Rights Reserved.</copyright>
-    <lastBuildDate>Tue, 27 Jul 2021 14:57:18 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jul 2021 15:25:30 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>逻辑知识点</title>
+      <link>/posts/mem/logic/</link>
+      <pubDate>Sat, 31 Jul 2021 15:25:30 +0800</pubDate>
+      
+      <guid>/posts/mem/logic/</guid>
+      <description>&lt;p&gt;本文简单介绍了管理类综合考研的逻辑知识点，参考老吕管综合逻辑班。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>个人简历</title>
       <link>/about/</link>

@@ -2,6 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/tags/mem/</loc>
+    <lastmod>2021-07-31T15:25:30+08:00</lastmod>
+  </url><url>
+    <loc>/series/mem/</loc>
+    <lastmod>2021-07-31T15:25:30+08:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2021-07-31T15:25:30+08:00</lastmod>
+  </url><url>
+    <loc>/series/</loc>
+    <lastmod>2021-07-31T15:25:30+08:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2021-07-31T15:25:30+08:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2021-07-31T15:25:30+08:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-07-31T15:25:30+08:00</lastmod>
+  </url><url>
+    <loc>/categories/%E8%80%83%E7%A0%94/</loc>
+    <lastmod>2021-07-31T15:25:30+08:00</lastmod>
+  </url><url>
+    <loc>/tags/%E9%80%BB%E8%BE%91/</loc>
+    <lastmod>2021-07-31T15:25:30+08:00</lastmod>
+  </url><url>
+    <loc>/posts/mem/logic/</loc>
+    <lastmod>2021-07-31T15:25:30+08:00</lastmod>
+  </url><url>
     <loc>/about/</loc>
     <lastmod>2021-07-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -14,15 +44,6 @@
     <loc>/posts/hugo/deploy-blog-hugo/</loc>
     <lastmod>2021-07-27T14:57:18+08:00</lastmod>
   </url><url>
-    <loc>/</loc>
-    <lastmod>2021-07-27T14:57:18+08:00</lastmod>
-  </url><url>
-    <loc>/series/</loc>
-    <lastmod>2021-07-27T14:57:18+08:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2021-07-27T14:57:18+08:00</lastmod>
-  </url><url>
     <loc>/tags/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2021-07-27T14:57:18+08:00</lastmod>
   </url><url>
@@ -30,12 +51,6 @@
     <lastmod>2021-07-27T14:57:18+08:00</lastmod>
   </url><url>
     <loc>/categories/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-07-27T14:57:18+08:00</lastmod>
-  </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2021-07-27T14:57:18+08:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2021-07-27T14:57:18+08:00</lastmod>
   </url><url>
     <loc>/posts/hugo/set-up-blog-hugo/</loc>

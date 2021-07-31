@@ -6,7 +6,25 @@
     <description>Recent content in 标签 on Phares&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2021-{year} Phares Fung. All Rights Reserved.</copyright>
-    <lastBuildDate>Tue, 27 Jul 2021 14:57:18 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jul 2021 15:25:30 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MEM</title>
+      <link>/tags/mem/</link>
+      <pubDate>Sat, 31 Jul 2021 15:25:30 +0800</pubDate>
+      
+      <guid>/tags/mem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>逻辑</title>
+      <link>/tags/%E9%80%BB%E8%BE%91/</link>
+      <pubDate>Sat, 31 Jul 2021 15:25:30 +0800</pubDate>
+      
+      <guid>/tags/%E9%80%BB%E8%BE%91/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>hugo</title>
       <link>/tags/hugo/</link>

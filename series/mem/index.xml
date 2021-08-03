@@ -6,23 +6,32 @@
     <description>Recent content in MEM on Phares&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2021-{year} Phares Fung. All Rights Reserved.</copyright>
-    <lastBuildDate>Tue, 03 Aug 2021 09:50:30 +0800</lastBuildDate><atom:link href="/series/mem/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Aug 2021 13:47:30 +0800</lastBuildDate><atom:link href="/series/mem/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>形式逻辑（二）</title>
+      <title>形式逻辑（三）- 简单命题</title>
+      <link>/posts/mem/formal-logic-3/</link>
+      <pubDate>Tue, 03 Aug 2021 13:47:30 +0800</pubDate>
+      
+      <guid>/posts/mem/formal-logic-3/</guid>
+      <description>&lt;p&gt;本文简单介绍了管理类综合考研的逻辑知识点（简单命题），参考老吕管综合逻辑班。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>形式逻辑（二）- 联言、选言命题</title>
       <link>/posts/mem/formal-logic-2/</link>
       <pubDate>Tue, 03 Aug 2021 09:50:30 +0800</pubDate>
       
       <guid>/posts/mem/formal-logic-2/</guid>
-      <description>&lt;p&gt;本文简单介绍了管理类综合考研的逻辑知识点（二），参考老吕管综合逻辑班。&lt;/p&gt;</description>
+      <description>&lt;p&gt;本文简单介绍了管理类综合考研的逻辑知识点（联言、选言命题），参考老吕管综合逻辑班。&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>形式逻辑（一）</title>
+      <title>形式逻辑（一）- 假言命题</title>
       <link>/posts/mem/formal-logic-1/</link>
       <pubDate>Sat, 31 Jul 2021 15:25:30 +0800</pubDate>
       
       <guid>/posts/mem/formal-logic-1/</guid>
-      <description>&lt;p&gt;本文简单介绍了管理类综合考研的逻辑知识点（一），参考老吕管综合逻辑班。&lt;/p&gt;</description>
+      <description>&lt;p&gt;本文简单介绍了管理类综合考研的逻辑知识点（假言命题），参考老吕管综合逻辑班。&lt;/p&gt;</description>
     </item>
     
   </channel>

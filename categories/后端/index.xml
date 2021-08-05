@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 25 Aug 2020 16:38:55 +0000</lastBuildDate><atom:link href="/categories/%E5%90%8E%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java的线程：Thread和ThreadLocal</title>
-      <link>/posts/java/java-thread-threadlocal/</link>
+      <link>/posts/java-thread-threadlocal/</link>
       <pubDate>Tue, 25 Aug 2020 16:38:55 +0000</pubDate>
       
-      <guid>/posts/java/java-thread-threadlocal/</guid>
+      <guid>/posts/java-thread-threadlocal/</guid>
       <description>&lt;p&gt;本文简单介绍了 &lt;code&gt;Java的线程&lt;/code&gt; 和 &lt;code&gt;ThreadLocal&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     

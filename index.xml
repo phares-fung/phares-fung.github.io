@@ -81,10 +81,10 @@
     
     <item>
       <title>Java的线程：Thread和ThreadLocal</title>
-      <link>/posts/java/java-thread-threadlocal/</link>
+      <link>/posts/java-thread-threadlocal/</link>
       <pubDate>Tue, 25 Aug 2020 16:38:55 +0000</pubDate>
       
-      <guid>/posts/java/java-thread-threadlocal/</guid>
+      <guid>/posts/java-thread-threadlocal/</guid>
       <description>&lt;p&gt;本文简单介绍了 &lt;code&gt;Java的线程&lt;/code&gt; 和 &lt;code&gt;ThreadLocal&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
@@ -117,10 +117,10 @@
     
     <item>
       <title>JDK1.8在线安装（Linux）</title>
-      <link>/posts/java/jdk-install-online-linux/</link>
+      <link>/posts/jdk-install-online-linux/</link>
       <pubDate>Wed, 19 Aug 2020 10:00:00 +0000</pubDate>
       
-      <guid>/posts/java/jdk-install-online-linux/</guid>
+      <guid>/posts/jdk-install-online-linux/</guid>
       <description>&lt;p&gt;本文简单介绍了如何在Linux环境下安装 &lt;code&gt;JDK1.8&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     

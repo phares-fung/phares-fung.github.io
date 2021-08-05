@@ -3,27 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Node.js安装与配置（Windows） - Phares&#39;s blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
+    <title>JDK1.8在线安装（Linux） - Phares&#39;s blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/images/favicons/manifest.json">
 <link rel="icon" href="/images/favicons/favicon.ico">
 <meta name="keywords" content="" />
-<meta name="description" content="" /><meta itemprop="name" content="Node.js安装与配置（Windows）">
-<meta itemprop="description" content="本文简单介绍了如何在Windows环境下安装 Node.js。"><meta itemprop="datePublished" content="2020-08-19T16:00:00+00:00" />
-<meta itemprop="dateModified" content="2020-08-19T16:00:00+00:00" />
-<meta itemprop="wordCount" content="604">
-<meta itemprop="keywords" content="Node.js," /><meta property="og:title" content="Node.js安装与配置（Windows）" />
-<meta property="og:description" content="本文简单介绍了如何在Windows环境下安装 Node.js。" />
+<meta name="description" content="" /><meta itemprop="name" content="JDK1.8在线安装（Linux）">
+<meta itemprop="description" content="本文简单介绍了如何在Linux环境下安装 JDK1.8。"><meta itemprop="datePublished" content="2020-08-19T10:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-08-19T10:00:00+00:00" />
+<meta itemprop="wordCount" content="438">
+<meta itemprop="keywords" content="JDK1.8," /><meta property="og:title" content="JDK1.8在线安装（Linux）" />
+<meta property="og:description" content="本文简单介绍了如何在Linux环境下安装 JDK1.8。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/node-install-config-win/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-08-19T16:00:00+00:00" />
-<meta property="article:modified_time" content="2020-08-19T16:00:00+00:00" /><meta property="og:site_name" content="Phares&#39;s blog" />
+<meta property="og:url" content="/posts/jdk-install-online-linux/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-08-19T10:00:00+00:00" />
+<meta property="article:modified_time" content="2020-08-19T10:00:00+00:00" /><meta property="og:site_name" content="Phares&#39;s blog" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Node.js安装与配置（Windows）"/>
-<meta name="twitter:description" content="本文简单介绍了如何在Windows环境下安装 Node.js。"/>
+<meta name="twitter:title" content="JDK1.8在线安装（Linux）"/>
+<meta name="twitter:description" content="本文简单介绍了如何在Linux环境下安装 JDK1.8。"/>
 <meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.5ee45fb91827299eadeee3f7e452207ac01c986b6fa89db49d0e2c253735073b.css" integrity="sha256-XuRfuRgnKZ6t7uP35FIgesAcmGtvqJ20nQ4sJTc1Bzs=" crossorigin="anonymous"><script src="/js/bundle.min.e32615bc744413570374d5b28e8c02ec03c7b28c31485b6fcc5b6174a08766d9.js" integrity="sha256-4yYVvHREE1cDdNWyjowC7APHsowxSFtvzFthdKCHZtk=" crossorigin="anonymous"></script><script defer src="/js/katex.efb27591b98224b170a1dcd34b1b5ef4a9af1ae7a0ac31442742e776e52b60f9.js" integrity="sha256-77J1kbmCJLFwodzTSxte9KmvGuegrDFEJ0LnduUrYPk=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/css/custom.css" crossorigin="anonymous"></head><body><header><nav class="navbar navbar-expand-xl fixed-top">
   <div class="container">
@@ -139,7 +139,7 @@
       <div class="row content">
 <div class="col-lg-8">
   <div class="container"><nav class="row" aria-label="breadcrumb">
-  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item active">Node.js安装与配置（Windows）</li></ol>
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item active">JDK1.8在线安装（Linux）</li></ol>
 </nav><article class="post row surface"><div class="post-panel-wrapper">
   <div class="post-panel d-flex flex-column">
     <a id="sidebarToggler" class="action d-none d-lg-block" role="button">
@@ -161,14 +161,14 @@
 </a>
   </div>
 </div>
-<h1 class="post-title my-3">Node.js安装与配置（Windows）
+<h1 class="post-title my-3">JDK1.8在线安装（Linux）
 </h1><div class="post-meta mb-3">
   <span class="post-date me-2">
     <i class="fas fa-fw fa-calendar-alt"></i>2020-08-19
   </span>
   <span class="post-reading-time me-2">
-    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
-  </span><a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-taxonomy">#工具</a><a href="/series/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="post-taxonomy">#软件安装</a><a href="/tags/node.js/" class="post-taxonomy">#Node.js</a></div>
+    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+  </span><a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-taxonomy">#工具</a><a href="/series/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="post-taxonomy">#软件安装</a><a href="/tags/jdk1.8/" class="post-taxonomy">#JDK1.8</a></div>
 <div class="offcanvas offcanvas-end surface" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasTOCLabel">目录</h5>
@@ -179,60 +179,45 @@
   <div class="offcanvas-body">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#下载安装包">下载安装包</a></li>
-    <li><a href="#安装">安装</a></li>
-    <li><a href="#验证是否安装成功">验证是否安装成功</a></li>
-    <li><a href="#配置npm">配置npm</a></li>
+    <li><a href="#创建jdk安装目录">创建JDK安装目录</a></li>
+    <li><a href="#查看安装程序">查看安装程序</a></li>
+    <li><a href="#下载jdk包">下载JDK包</a></li>
+    <li><a href="#解压jdk包">解压JDK包</a></li>
     <li><a href="#配置环境变量">配置环境变量</a></li>
-    <li><a href="#测试">测试</a></li>
+    <li><a href="#配置文件生效">配置文件生效</a></li>
+    <li><a href="#检查安装和配置结果">检查安装和配置结果</a></li>
   </ul>
 </nav>
   </div>
-</div><div class="post-content mb-3"><p>本文简单介绍了如何在Windows环境下安装 <code>Node.js</code>。</p>
-<h2 id="下载安装包">下载安装包</h2>
-<p><a href="https://nodejs.org/en/" target="_blank">Node.js官网下载</a>
-</p>
-<p><img src="001.png" style="zoom:80%;" /></p>
-<h2 id="安装">安装</h2>
-<p>双击安装包进行安装，直接点击下一步</p>
-<p><img src="002.png" style="zoom:80%;" /></p>
-<p>此处打勾后点击下一步</p>
-<p><img src="003.png" style="zoom:80%;" /></p>
-<p>选择安装路径后，点击下一步</p>
-<p><img src="004.png" style="zoom:80%;" /></p>
-<p>之后选择默认，点击下一步，等待安装完成！</p>
-<h2 id="验证是否安装成功">验证是否安装成功</h2>
-<p>在安装过程中已经自动配置好了环境变量并安装好了npm包，此时可以执行以下命令查看</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span># 查看node版本号
-<span class="ln">2</span>node -v
-<span class="ln">3</span># 查看npm版本号
-<span class="ln">4</span>npm -v
-</code></pre></div><p><img src="005.png" style="zoom:80%;" /></p>
-<h2 id="配置npm">配置npm</h2>
-<p>配置npm在安装全局模块时的路径和缓存路径</p>
-<p>默认全局模块安装在：C:\Users\用户名\AppData\Roaming路径下的npm和npm_cache中</p>
-<p>自定义全局模块安装路径：在node.js安装目录下新建两个文件夹 node_global和node_cache，然后在cmd命令下执行如下两个命令：</p>
-<p>我的安装目录为：D:\Program Files\nodejs，改成你自己的即可</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>npm config set prefix &#34;D:\Program Files\nodejs\node_global&#34;
-<span class="ln">2</span>npm config set cache &#34;D:\Program Files\nodejs\node_cache&#34;
-</code></pre></div><h2 id="配置环境变量">配置环境变量</h2>
-<p>系统变量中新建一个变量名为 “NODE_PATH”，值为“D:\Program Files\nodejs\node_modules”，如下图：</p>
-<p><img class="img-fluid" src="006.png" alt=""  loading="lazy" />
-</p>
-<p>最后编辑用户变量里的Path，将相应npm的路径改为：D:\Program Files\nodejs\node_global，如下：</p>
-<p>更改前：</p>
-<p><img class="img-fluid" src="007.png" alt=""  loading="lazy" />
-</p>
-<p>更改后：</p>
-<p><img class="img-fluid" src="008.png" alt=""  loading="lazy" />
-</p>
-<h2 id="测试">测试</h2>
-<p>在cmd命令下执行 npm install webpack -g 然后安装成功后可以看到自定义的两个文件夹已生效：</p>
-<p><img class="img-fluid" src="009.png" alt=""  loading="lazy" />
-</p>
-<p>webpack 也已安装成功，执行 npm webpack -v 可以看到所安装webpack的版本号：</p>
-<p><img class="img-fluid" src="010.png" alt=""  loading="lazy" />
-</p></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+</div><div class="post-content mb-3"><p>本文简单介绍了如何在Linux环境下安装 <code>JDK1.8</code>。</p>
+<h2 id="创建jdk安装目录">创建JDK安装目录</h2>
+<p>建议将JDK安装在/usr/java文件夹中（可以自己选择目录）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>mkdir -p /usr/local/src/jdk
+</code></pre></div><h2 id="查看安装程序">查看安装程序</h2>
+<p>如果之前安装过JDK，一定要把之前的卸载删除干净</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>rpm -qa | grep -i jdk
+</code></pre></div><h2 id="下载jdk包">下载JDK包</h2>
+<p>本次通过wget命令下载jdk-8u131-linux-x64.tar.gz包</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>wget --no-check-certificate --no-cookies --header &#34;Cookie: oraclelicense=accept-securebackup-cookie&#34;  http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.tar.gz
+</code></pre></div><p>注：&ndash;no-check-certificate &ndash;no-cookies &ndash;header &ldquo;Cookie: oraclelicense=accept-securebackup-cookie&quot;是为了避开用户验证</p>
+<h2 id="解压jdk包">解压JDK包</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>tar -zxvf jdk-8u131-linux-x64.tar.gz
+</code></pre></div><p>解压后生成jdk1.8.0_131文件夹，可以使用mv自定义文件夹名</p>
+<h2 id="配置环境变量">配置环境变量</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>vi /etc/profile
+</code></pre></div><p>Shift + g 定位到最后一行
+按一下 a 或者 i 键，进入编辑模式，添加下面两行：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>export JAVA_HOME=/usr/local/src/jdk/jdk1.8.0_131
+<span class="ln">2</span>export PATH=$PATH:$JAVA_HOME/bin
+</code></pre></div><p>按Esc键，输入:wq，保存并退出</p>
+<h2 id="配置文件生效">配置文件生效</h2>
+<p>使配置文件生效</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>source /etc/profile 
+</code></pre></div><h2 id="检查安装和配置结果">检查安装和配置结果</h2>
+<p>若出现JDK版本，则安装并配置成功</p>
+<p>若提示命令找不到的话，查看一下/etc/profile文件中的JAVA_HOME是否错误</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>java -version
+</code></pre></div></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
       <div class="modal-header">
@@ -258,21 +243,12 @@
     </div>
   </div>
 </div><hr /><div class="post-navs d-flex mb-3 justify-content-between">
-  <div class="post-nav w-50"><div class="prev-post btn btn-sm">
-      <a href="/posts/git-config-ssh/">Git配置（SSH方式）
-</a>
-    </div></div>
+  <div class="post-nav w-50"></div>
   <div class="post-nav flex-row-reverse"><div class="next-post btn btn-sm">
-      <a href="/posts/java-thread-threadlocal/">Java的线程：Thread和ThreadLocal
+      <a href="/posts/git-install-win/">Git下载安装（Windows）
 </a>
     </div></div>
-</div><section class="related-posts">
-    <h3>相关文章</h3>
-    <ul class="related-posts"><li><a href="/posts/git-config-ssh/">Git配置（SSH方式）
-</a></li><li><a href="/posts/git-install-win/">Git下载安装（Windows）
-</a></li><li><a href="/posts/jdk-install-online-linux/">JDK1.8在线安装（Linux）
-</a></li></ul>
-  </section></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
+</div></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
   repo="https://github.com/phares-fung"
   issue-term="pathname"
   label=""

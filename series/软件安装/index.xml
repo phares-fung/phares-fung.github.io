@@ -36,10 +36,10 @@
     
     <item>
       <title>JDK1.8在线安装（Linux）</title>
-      <link>/posts/java/jdk-install-online-linux/</link>
+      <link>/posts/jdk-install-online-linux/</link>
       <pubDate>Wed, 19 Aug 2020 10:00:00 +0000</pubDate>
       
-      <guid>/posts/java/jdk-install-online-linux/</guid>
+      <guid>/posts/jdk-install-online-linux/</guid>
       <description>&lt;p&gt;本文简单介绍了如何在Linux环境下安装 &lt;code&gt;JDK1.8&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     

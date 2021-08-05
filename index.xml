@@ -63,64 +63,64 @@
     
     <item>
       <title>Hugo博客部署</title>
-      <link>/posts/hugo/deploy-blog-hugo/</link>
+      <link>/posts/deploy-blog-hugo/</link>
       <pubDate>Tue, 27 Jul 2021 14:57:18 +0800</pubDate>
       
-      <guid>/posts/hugo/deploy-blog-hugo/</guid>
+      <guid>/posts/deploy-blog-hugo/</guid>
       <description>&lt;p&gt;本文展示了如何将 &lt;code&gt;hugo&lt;/code&gt; 博客部署到 &lt;code&gt;github&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Hugo搭建博客</title>
-      <link>/posts/hugo/set-up-blog-hugo/</link>
+      <link>/posts/set-up-blog-hugo/</link>
       <pubDate>Tue, 27 Jul 2021 11:02:02 +0800</pubDate>
       
-      <guid>/posts/hugo/set-up-blog-hugo/</guid>
+      <guid>/posts/set-up-blog-hugo/</guid>
       <description>&lt;p&gt;本文展示了如何使用 &lt;code&gt;hugo&lt;/code&gt; 搭建博客。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Java的线程：Thread和ThreadLocal</title>
-      <link>/posts/back-end/java/java-thread-threadlocal/</link>
+      <link>/posts/java/java-thread-threadlocal/</link>
       <pubDate>Tue, 25 Aug 2020 16:38:55 +0000</pubDate>
       
-      <guid>/posts/back-end/java/java-thread-threadlocal/</guid>
+      <guid>/posts/java/java-thread-threadlocal/</guid>
       <description>&lt;p&gt;本文简单介绍了 &lt;code&gt;Java的线程&lt;/code&gt; 和 &lt;code&gt;ThreadLocal&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Node.js安装与配置（Windows）</title>
-      <link>/posts/front-end/node-install-config-win/</link>
+      <link>/posts/node-install-config-win/</link>
       <pubDate>Wed, 19 Aug 2020 16:00:00 +0000</pubDate>
       
-      <guid>/posts/front-end/node-install-config-win/</guid>
+      <guid>/posts/node-install-config-win/</guid>
       <description>&lt;p&gt;本文简单介绍了如何在Windows环境下安装 &lt;code&gt;Node.js&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Git配置（SSH方式）</title>
-      <link>/posts/git/git-config-ssh/</link>
+      <link>/posts/git-config-ssh/</link>
       <pubDate>Wed, 19 Aug 2020 14:00:00 +0000</pubDate>
       
-      <guid>/posts/git/git-config-ssh/</guid>
+      <guid>/posts/git-config-ssh/</guid>
       <description>&lt;p&gt;本文展示了如何配置 &lt;code&gt;Git&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Git下载安装（Windows）</title>
-      <link>/posts/git/git-install-win/</link>
+      <link>/posts/git-install-win/</link>
       <pubDate>Wed, 19 Aug 2020 12:00:00 +0000</pubDate>
       
-      <guid>/posts/git/git-install-win/</guid>
+      <guid>/posts/git-install-win/</guid>
       <description>&lt;p&gt;本文展示了如何安装 &lt;code&gt;Git&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>JDK1.8在线安装（Linux）</title>
-      <link>/posts/back-end/java/jdk-install-online-linux/</link>
+      <link>/posts/java/jdk-install-online-linux/</link>
       <pubDate>Wed, 19 Aug 2020 10:00:00 +0000</pubDate>
       
-      <guid>/posts/back-end/java/jdk-install-online-linux/</guid>
+      <guid>/posts/java/jdk-install-online-linux/</guid>
       <description>&lt;p&gt;本文简单介绍了如何在Linux环境下安装 &lt;code&gt;JDK1.8&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     

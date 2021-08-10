@@ -3,29 +3,50 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hugo博客部署 - Phares&#39;s blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
+    <title>形式逻辑（四）- 概念 - Phares&#39;s blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/images/favicons/manifest.json">
 <link rel="icon" href="/images/favicons/favicon.ico">
 <meta name="keywords" content="" />
-<meta name="description" content="" /><meta itemprop="name" content="Hugo博客部署">
-<meta itemprop="description" content="本文展示了如何将 hugo 博客部署到 github。"><meta itemprop="datePublished" content="2021-07-27T14:57:18+08:00" />
-<meta itemprop="dateModified" content="2021-07-27T14:57:18+08:00" />
-<meta itemprop="wordCount" content="356">
-<meta itemprop="keywords" content="hugo,博客," /><meta property="og:title" content="Hugo博客部署" />
-<meta property="og:description" content="本文展示了如何将 hugo 博客部署到 github。" />
+<meta name="description" content="" /><meta itemprop="name" content="形式逻辑（四）- 概念">
+<meta itemprop="description" content="本文简单介绍了管理类综合考研的形式逻辑知识点（概念），参考老吕管综合逻辑班。"><meta itemprop="datePublished" content="2021-08-03T18:53:30+08:00" />
+<meta itemprop="dateModified" content="2021-08-03T18:53:30+08:00" />
+<meta itemprop="wordCount" content="1274">
+<meta itemprop="keywords" content="MEM,逻辑," /><meta property="og:title" content="形式逻辑（四）- 概念" />
+<meta property="og:description" content="本文简单介绍了管理类综合考研的形式逻辑知识点（概念），参考老吕管综合逻辑班。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/deploy-blog-hugo/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-07-27T14:57:18+08:00" />
-<meta property="article:modified_time" content="2021-07-27T14:57:18+08:00" /><meta property="og:site_name" content="Phares&#39;s blog" />
-
+<meta property="og:url" content="/posts/formal-logic-4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-03T18:53:30+08:00" />
+<meta property="article:modified_time" content="2021-08-03T18:53:30+08:00" /><meta property="og:site_name" content="Phares&#39;s blog" />
+<meta property="og:see_also" content="/posts/logic-of-arguments-2/" /><meta property="og:see_also" content="/posts/logic-of-arguments-1/" /><meta property="og:see_also" content="/posts/formal-logic-3/" /><meta property="og:see_also" content="/posts/formal-logic-2/" /><meta property="og:see_also" content="/posts/formal-logic-1/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hugo博客部署"/>
-<meta name="twitter:description" content="本文展示了如何将 hugo 博客部署到 github。"/>
+<meta name="twitter:title" content="形式逻辑（四）- 概念"/>
+<meta name="twitter:description" content="本文简单介绍了管理类综合考研的形式逻辑知识点（概念），参考老吕管综合逻辑班。"/>
 <meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.f2209a83bfa7f733540426e3abe2edccef95ac63c8535e2b3750caccec2f85ed.css" integrity="sha256-8iCag7&#43;n9zNUBCbjq&#43;LtzO&#43;VrGPIU14rN1DKzOwvhe0=" crossorigin="anonymous"><script src="/js/bundle.min.8ef42d04b6b181f947353c61222887dc043ac1405cb15b596aecca43a15d8d38.js" integrity="sha256-jvQtBLaxgflHNTxhIiiH3AQ6wUBcsVtZauzKQ6FdjTg=" crossorigin="anonymous"></script><script defer src="/js/katex.efb27591b98224b170a1dcd34b1b5ef4a9af1ae7a0ac31442742e776e52b60f9.js" integrity="sha256-77J1kbmCJLFwodzTSxte9KmvGuegrDFEJ0LnduUrYPk=" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="/css/custom.css" crossorigin="anonymous"></head><body><header><nav class="navbar navbar-expand-xl fixed-top">
+<link rel="stylesheet" href="/css/custom.css" crossorigin="anonymous">
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [["$", "$"]],
+        },
+        displayMath: [
+            ["$$", "$$"],
+            ["\[\[", "\]\]"],
+        ],
+        svg: {
+            fontCache: "global",
+        },
+    };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script
+        id="MathJax-script"
+        async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
+</head><body><header><nav class="navbar navbar-expand-xl fixed-top">
   <div class="container">
     <a class="navbar-brand" href="/">
       <img class="logo" alt="Logo" src="/images/logo.jpg" loading="lazy">Phares</a>
@@ -139,7 +160,7 @@
       <div class="row content">
 <div class="col-lg-8">
   <div class="container"><nav class="row" aria-label="breadcrumb">
-  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item active">Hugo博客部署</li></ol>
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item active">形式逻辑（四）- 概念</li></ol>
 </nav><article class="post row surface"><div class="post-panel-wrapper">
   <div class="post-panel d-flex flex-column">
     <a id="sidebarToggler" class="action d-none d-lg-block" role="button">
@@ -161,12 +182,12 @@
 </a>
   </div>
 </div>
-<h1 class="post-title my-3">Hugo博客部署
+<h1 class="post-title my-3">形式逻辑（四）- 概念
 </h1><div class="post-meta mb-3"><span class="post-date me-2">
-    <i class="fas fa-fw fa-calendar-alt"></i>2021-07-27
+    <i class="fas fa-fw fa-calendar-alt"></i>2021-08-03
   </span><span class="post-reading-time me-2">
-    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
-  </span><a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-taxonomy">#工具</a><a href="/series/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-taxonomy">#博客搭建</a><a href="/tags/hugo/" class="post-taxonomy">#hugo</a><a href="/tags/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a></div>
+    <i class="fas fa-fw fa-coffee"></i>3 分钟阅读
+  </span><a href="/categories/%E8%80%83%E7%A0%94/" class="post-taxonomy">#考研</a><a href="/series/mem/" class="post-taxonomy">#MEM</a><a href="/tags/mem/" class="post-taxonomy">#MEM</a><a href="/tags/%E9%80%BB%E8%BE%91/" class="post-taxonomy">#逻辑</a></div>
 <div class="offcanvas offcanvas-end surface" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasTOCLabel">目录</h5>
@@ -177,44 +198,208 @@
   <div class="offcanvas-body">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-创建仓库">1. 创建仓库</a></li>
-    <li><a href="#2-推送源文件">2. 推送源文件</a></li>
-    <li><a href="#3-推送静态文件">3. 推送静态文件</a></li>
-    <li><a href="#4-新环境使用">4. 新环境使用</a></li>
+    <li><a href="#1-什么是概念">1. 什么是概念</a></li>
+    <li><a href="#2-什么是定义">2. 什么是定义</a>
+      <ul>
+        <li><a href="#21-定义必须遵守的规则">2.1 定义必须遵守的规则</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-概念的种类">3. 概念的种类</a>
+      <ul>
+        <li><a href="#31-集合概念">3.1 集合概念</a></li>
+        <li><a href="#32-类概念">3.2 类概念</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-概念之间的关系">4. 概念之间的关系</a></li>
+    <li><a href="#5-四种与概念的关系有关的谬误">5. 四种与概念的关系有关的谬误</a></li>
+    <li><a href="#6-概念的划分">6. 概念的划分</a></li>
   </ul>
 </nav>
   </div>
-</div><div class="post-content mb-3"><p>本文展示了如何将 <code>hugo</code> 博客部署到 <code>github</code>。</p>
-<h2 id="1-创建仓库">1. 创建仓库</h2>
-<p>在github上，创建两个仓库，均为master分支：</p>
+</div><div class="post-content mb-3"><p>本文简单介绍了管理类综合考研的形式逻辑知识点（概念），参考老吕管综合逻辑班。</p>
+<h2 id="1-什么是概念">1. 什么是概念</h2>
+<p>概念是反映对象本质属性的思维形式，包括内涵和外延。</p>
+<p>内涵：指概念所反映的事物的本质属性。</p>
+<p>外延：指具有概念的内涵所具有的那些属性的事物的范围。</p>
+<p>【例如】</p>
+<p>​		法律是国家制定或认可的，由国家强制力保证实施的，以规定当事人权利和义务为内容的具有普遍约束力的社会规范。</p>
+<p>​		中国的十类主要部门法为：宪法、行政法、民商法、刑法、经济法、诉讼法、劳动法、自然资源与环境法、军事法、科教文卫法。</p>
+<h2 id="2-什么是定义">2. 什么是定义</h2>
+<p>定义是对概念的描述。它包含被定义项、联项、定义项。</p>
+<p>【例如】网络用语“土豪”（被定义项）是（联项）有钱且在网络上以此炫耀的人（定义项）。</p>
+<h3 id="21-定义必须遵守的规则">2.1 定义必须遵守的规则</h3>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>规则</th>
+<th>违反规则的错误</th>
+<th>例句</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>定义项不得直接包含被定义项</td>
+<td>同语反复</td>
+<td>聪明人就是脑子很聪明的人</td>
+</tr>
+<tr>
+<td>2</td>
+<td>定义项不得间接包含被定义项</td>
+<td>循环定义</td>
+<td>奇数就是偶数加1；而偶数就是奇数减1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>定义项的外延和被定义项的外延必须完全相等</td>
+<td>定义项&gt;被定义项：定义过宽<br />定义项&lt;被定义项：定义过窄</td>
+<td>人类是指用肺呼吸的哺乳动物<br />人类是指女人</td>
+</tr>
+<tr>
+<td>4</td>
+<td>定义不得包括含混的概念，不能用比喻句</td>
+<td>定义含混</td>
+<td>儿童就是指祖国的花朵</td>
+</tr>
+<tr>
+<td>5</td>
+<td>定义不应当是否定的</td>
+<td>用否定句下定义</td>
+<td>男人就是不是女人的人</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-概念的种类">3. 概念的种类</h2>
+<p>概念可以分为<font color=blue>集合概念</font>和<font color=blue>类概念</font>。</p>
+<h3 id="31-集合概念">3.1 集合概念</h3>
+<p><font color=red>对群体性质的描述，而非对群体内个体的共性的总结。</font>例如：中华民族是勤劳善良的。</p>
+<p>【常见错误】</p>
+<ul>
+<li>分解谬误
+<ul>
+<li>这个公司是家非常优秀的公司，所以，公司里的每个员工也是优秀的。</li>
+</ul>
+</li>
+<li>合成谬误
+<ul>
+<li>这只足球队的每个队员都是优秀的足球运动员，因此，这只足球队是支优秀的球队。</li>
+</ul>
+</li>
+</ul>
+<h3 id="32-类概念">3.2 类概念</h3>
+<p><font color=red>类具备的性质，类中的每个个体都应该具有。</font></p>
+<p>【技巧】类：前面可以加每个，后面可以加之一。</p>
+<h2 id="4-概念之间的关系">4. 概念之间的关系</h2>
 <ol>
-<li>username.github.io   // username为你自己github的用户名，存放编译后的静态文件</li>
-<li>blog  // 名称随意，存放源文件</li>
+<li>
+<p>全同关系</p>
+<ul>
+<li><font color=red>两个概念的外延完全相同。</font>例如：等边三角形、所有角均为60°的三角形</li>
+</ul>
+</li>
+<li>
+<p>种属关系（从属关系或包含于关系）</p>
+<ul>
+<li><font color=red>一个概念A（种）的外延包含于另外一个概念B（属）外延。</font>例如：兔子是动物的一种。</li>
+</ul>
+</li>
+<li>
+<p>交叉关系</p>
+<ul>
+<li><font color=red>两个概念在外延上有并且只有一部分是重合的。</font>例如：男人、教授，重合部分：男教授</li>
+</ul>
+</li>
+<li>
+<p>全异关系</p>
+<ul>
+<li><font color=red>两个概念的外延没有重合。</font>包含两种：。
+<ul>
+<li>矛盾关系：不重合，且相加是全集，一真一假。</li>
+<li>反对关系：不重合，且相加不是全集，可同假不可同真。</li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
-<h2 id="2-推送源文件">2. 推送源文件</h2>
-<p>在站点根目录，先将编译的静态文件夹public删除，再执行以下命令：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>git init
-<span class="ln">2</span>git remote add origin git@github.com:phares-fung/blog.git
-<span class="ln">3</span>git add -a
-<span class="ln">4</span>git commit -m &#34;first commit&#34;
-<span class="ln">5</span>git push -u origin master
-</code></pre></div><p>此时，就将站点源文件上传到github上了。</p>
-<h2 id="3-推送静态文件">3. 推送静态文件</h2>
-<p>在站点根目录，执行命令，拉取子模块username.github.io到public目录：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>git submodule add -b master git@github.com:phares-fung/phares-fung.github.io.git public
-</code></pre></div><p>之后执行命令，生成静态文件：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>hugo -t m10c
-</code></pre></div><p>最后执行提交命令，将所有文件改动提交到仓库。</p>
-<p>此时可以通过git page网站 <a href="https://phares-fung.github.io/" target="_blank">https://username.github.io/</a>
- 查看博客站点。</p>
-<h2 id="4-新环境使用">4. 新环境使用</h2>
+<h2 id="5-四种与概念的关系有关的谬误">5. 四种与概念的关系有关的谬误</h2>
 <ol>
-<li>安装hugo</li>
-<li>从仓库拉取源文件</li>
-<li>修改后执行生成静态文件的命令</li>
-<li>提交所有更改</li>
-<li>访问git page网站查看</li>
-</ol></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+<li>
+<p>偷换概念</p>
+<ul>
+<li>例如：象是动物，所以小（年纪小）象是小（体积小）动物。</li>
+</ul>
+</li>
+<li>
+<p>自相矛盾</p>
+<ul>
+<li>例如：今年过节不收礼，收礼只收&hellip;&hellip;</li>
+</ul>
+</li>
+<li>
+<p>模棱两不可</p>
+<ul>
+<li>例如：老师在课堂上问：“这道题会做的举手”，冬雨没有举手；老师又问：“这道题不会做的举手”，冬雨也没有举手。</li>
+</ul>
+</li>
+<li>
+<p>非黑即白</p>
+<ul>
+<li>
+<p>例如：</p>
+<p>A：“你养宠物了吗？”</p>
+<p>B：“养了。”</p>
+<p>A：“你养的是猫吗？”</p>
+<p>B：“不是。”</p>
+<p>A：“那你养的一定是狗。”</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="6-概念的划分">6. 概念的划分</h2>
+<p>概念的划分需要满足以下规则：</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>规则</th>
+<th>违反规则的逻辑错误</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>标准要统一</td>
+<td>划分标准不一致</td>
+<td>男人分为男人、大学生</td>
+</tr>
+<tr>
+<td>2</td>
+<td>层级要统一</td>
+<td>不当并列</td>
+<td>学生分为大学生、中学生和一年级学生。</td>
+</tr>
+<tr>
+<td>3</td>
+<td>不能重合</td>
+<td>子项相容</td>
+<td>人类分为男人、女人和孩子。</td>
+</tr>
+<tr>
+<td>4</td>
+<td>不能漏</td>
+<td>划分不全</td>
+<td>人类分为老年人、中年人和幼儿。</td>
+</tr>
+<tr>
+<td>5</td>
+<td>不能多</td>
+<td>多出子项</td>
+<td>孩子分为婴儿、幼儿、少年和中年。</td>
+</tr>
+</tbody>
+</table></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
       <div class="modal-header">
@@ -241,20 +426,20 @@
   </div>
 </div><hr /><div class="post-navs d-flex mb-3 justify-content-between">
   <div class="post-nav w-50"><div class="prev-post btn btn-sm">
-      <a href="/posts/set-up-blog-hugo/">Hugo搭建博客
+      <a href="/posts/formal-logic-3/">形式逻辑（三）- 简单命题
 </a>
     </div></div>
   <div class="post-nav flex-row-reverse"><div class="next-post btn btn-sm">
-      <a href="/posts/formal-logic-1/">形式逻辑（一）- 假言命题
+      <a href="/posts/logic-of-arguments-1/">论证逻辑（一）- 论证
 </a>
     </div></div>
 </div><section class="related-posts">
     <h3>相关文章</h3>
-    <ul class="related-posts"><li><a href="/posts/set-up-blog-hugo/">Hugo搭建博客
-</a></li><li><a href="/posts/java-thread-threadlocal/">Java的线程：Thread和ThreadLocal
-</a></li><li><a href="/posts/node-install-config-win/">Node.js安装与配置（Windows）
-</a></li><li><a href="/posts/git-config-ssh/">Git配置（SSH方式）
-</a></li><li><a href="/posts/git-install-win/">Git下载安装（Windows）
+    <ul class="related-posts"><li><a href="/posts/formal-logic-3/">形式逻辑（三）- 简单命题
+</a></li><li><a href="/posts/formal-logic-2/">形式逻辑（二）- 联言、选言命题
+</a></li><li><a href="/posts/formal-logic-1/">形式逻辑（一）- 假言命题
+</a></li><li><a href="/posts/deploy-blog-hugo/">Hugo博客部署
+</a></li><li><a href="/posts/set-up-blog-hugo/">Hugo搭建博客
 </a></li></ul>
   </section></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
   repo="https://github.com/phares-fung"

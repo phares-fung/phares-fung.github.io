@@ -3,29 +3,50 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hugo博客部署 - Phares&#39;s blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
+    <title>形式逻辑（三）- 简单命题 - Phares&#39;s blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/images/favicons/manifest.json">
 <link rel="icon" href="/images/favicons/favicon.ico">
 <meta name="keywords" content="" />
-<meta name="description" content="" /><meta itemprop="name" content="Hugo博客部署">
-<meta itemprop="description" content="本文展示了如何将 hugo 博客部署到 github。"><meta itemprop="datePublished" content="2021-07-27T14:57:18+08:00" />
-<meta itemprop="dateModified" content="2021-07-27T14:57:18+08:00" />
-<meta itemprop="wordCount" content="356">
-<meta itemprop="keywords" content="hugo,博客," /><meta property="og:title" content="Hugo博客部署" />
-<meta property="og:description" content="本文展示了如何将 hugo 博客部署到 github。" />
+<meta name="description" content="" /><meta itemprop="name" content="形式逻辑（三）- 简单命题">
+<meta itemprop="description" content="本文简单介绍了管理类综合考研的形式逻辑知识点（简单命题），参考老吕管综合逻辑班。"><meta itemprop="datePublished" content="2021-08-03T13:47:30+08:00" />
+<meta itemprop="dateModified" content="2021-08-03T13:47:30+08:00" />
+<meta itemprop="wordCount" content="689">
+<meta itemprop="keywords" content="MEM,逻辑," /><meta property="og:title" content="形式逻辑（三）- 简单命题" />
+<meta property="og:description" content="本文简单介绍了管理类综合考研的形式逻辑知识点（简单命题），参考老吕管综合逻辑班。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/deploy-blog-hugo/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-07-27T14:57:18+08:00" />
-<meta property="article:modified_time" content="2021-07-27T14:57:18+08:00" /><meta property="og:site_name" content="Phares&#39;s blog" />
-
+<meta property="og:url" content="/posts/formal-logic-3/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-03T13:47:30+08:00" />
+<meta property="article:modified_time" content="2021-08-03T13:47:30+08:00" /><meta property="og:site_name" content="Phares&#39;s blog" />
+<meta property="og:see_also" content="/posts/logic-of-arguments-2/" /><meta property="og:see_also" content="/posts/logic-of-arguments-1/" /><meta property="og:see_also" content="/posts/formal-logic-4/" /><meta property="og:see_also" content="/posts/formal-logic-2/" /><meta property="og:see_also" content="/posts/formal-logic-1/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hugo博客部署"/>
-<meta name="twitter:description" content="本文展示了如何将 hugo 博客部署到 github。"/>
+<meta name="twitter:title" content="形式逻辑（三）- 简单命题"/>
+<meta name="twitter:description" content="本文简单介绍了管理类综合考研的形式逻辑知识点（简单命题），参考老吕管综合逻辑班。"/>
 <meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.f2209a83bfa7f733540426e3abe2edccef95ac63c8535e2b3750caccec2f85ed.css" integrity="sha256-8iCag7&#43;n9zNUBCbjq&#43;LtzO&#43;VrGPIU14rN1DKzOwvhe0=" crossorigin="anonymous"><script src="/js/bundle.min.8ef42d04b6b181f947353c61222887dc043ac1405cb15b596aecca43a15d8d38.js" integrity="sha256-jvQtBLaxgflHNTxhIiiH3AQ6wUBcsVtZauzKQ6FdjTg=" crossorigin="anonymous"></script><script defer src="/js/katex.efb27591b98224b170a1dcd34b1b5ef4a9af1ae7a0ac31442742e776e52b60f9.js" integrity="sha256-77J1kbmCJLFwodzTSxte9KmvGuegrDFEJ0LnduUrYPk=" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="/css/custom.css" crossorigin="anonymous"></head><body><header><nav class="navbar navbar-expand-xl fixed-top">
+<link rel="stylesheet" href="/css/custom.css" crossorigin="anonymous">
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [["$", "$"]],
+        },
+        displayMath: [
+            ["$$", "$$"],
+            ["\[\[", "\]\]"],
+        ],
+        svg: {
+            fontCache: "global",
+        },
+    };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script
+        id="MathJax-script"
+        async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
+</head><body><header><nav class="navbar navbar-expand-xl fixed-top">
   <div class="container">
     <a class="navbar-brand" href="/">
       <img class="logo" alt="Logo" src="/images/logo.jpg" loading="lazy">Phares</a>
@@ -139,7 +160,7 @@
       <div class="row content">
 <div class="col-lg-8">
   <div class="container"><nav class="row" aria-label="breadcrumb">
-  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item active">Hugo博客部署</li></ol>
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item active">形式逻辑（三）- 简单命题</li></ol>
 </nav><article class="post row surface"><div class="post-panel-wrapper">
   <div class="post-panel d-flex flex-column">
     <a id="sidebarToggler" class="action d-none d-lg-block" role="button">
@@ -161,12 +182,12 @@
 </a>
   </div>
 </div>
-<h1 class="post-title my-3">Hugo博客部署
+<h1 class="post-title my-3">形式逻辑（三）- 简单命题
 </h1><div class="post-meta mb-3"><span class="post-date me-2">
-    <i class="fas fa-fw fa-calendar-alt"></i>2021-07-27
+    <i class="fas fa-fw fa-calendar-alt"></i>2021-08-03
   </span><span class="post-reading-time me-2">
-    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
-  </span><a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-taxonomy">#工具</a><a href="/series/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-taxonomy">#博客搭建</a><a href="/tags/hugo/" class="post-taxonomy">#hugo</a><a href="/tags/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">#博客</a></div>
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
+  </span><a href="/categories/%E8%80%83%E7%A0%94/" class="post-taxonomy">#考研</a><a href="/series/mem/" class="post-taxonomy">#MEM</a><a href="/tags/mem/" class="post-taxonomy">#MEM</a><a href="/tags/%E9%80%BB%E8%BE%91/" class="post-taxonomy">#逻辑</a></div>
 <div class="offcanvas offcanvas-end surface" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasTOCLabel">目录</h5>
@@ -177,44 +198,161 @@
   <div class="offcanvas-body">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#1-创建仓库">1. 创建仓库</a></li>
-    <li><a href="#2-推送源文件">2. 推送源文件</a></li>
-    <li><a href="#3-推送静态文件">3. 推送静态文件</a></li>
-    <li><a href="#4-新环境使用">4. 新环境使用</a></li>
+    <li><a href="#1-性质命题">1. 性质命题</a>
+      <ul>
+        <li><a href="#11-性质命题的结构">1.1 性质命题的结构</a></li>
+        <li><a href="#12-特殊句式">1.2 特殊句式</a></li>
+        <li><a href="#13-性质命题的对当关系">1.3 性质命题的对当关系</a></li>
+        <li><a href="#14-性质命题的负命题的替换法口诀">1.4 性质命题的负命题的替换法口诀</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-模态命题">2. 模态命题</a>
+      <ul>
+        <li><a href="#21-模态命题的数学意义">2.1 模态命题的数学意义</a></li>
+        <li><a href="#22-模态命题的对当关系">2.2 模态命题的对当关系</a></li>
+        <li><a href="#23-模态命题的负命题的替换法口诀">2.3 模态命题的负命题的替换法口诀</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
-</div><div class="post-content mb-3"><p>本文展示了如何将 <code>hugo</code> 博客部署到 <code>github</code>。</p>
-<h2 id="1-创建仓库">1. 创建仓库</h2>
-<p>在github上，创建两个仓库，均为master分支：</p>
-<ol>
-<li>username.github.io   // username为你自己github的用户名，存放编译后的静态文件</li>
-<li>blog  // 名称随意，存放源文件</li>
-</ol>
-<h2 id="2-推送源文件">2. 推送源文件</h2>
-<p>在站点根目录，先将编译的静态文件夹public删除，再执行以下命令：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>git init
-<span class="ln">2</span>git remote add origin git@github.com:phares-fung/blog.git
-<span class="ln">3</span>git add -a
-<span class="ln">4</span>git commit -m &#34;first commit&#34;
-<span class="ln">5</span>git push -u origin master
-</code></pre></div><p>此时，就将站点源文件上传到github上了。</p>
-<h2 id="3-推送静态文件">3. 推送静态文件</h2>
-<p>在站点根目录，执行命令，拉取子模块username.github.io到public目录：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>git submodule add -b master git@github.com:phares-fung/phares-fung.github.io.git public
-</code></pre></div><p>之后执行命令，生成静态文件：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>hugo -t m10c
-</code></pre></div><p>最后执行提交命令，将所有文件改动提交到仓库。</p>
-<p>此时可以通过git page网站 <a href="https://phares-fung.github.io/" target="_blank">https://username.github.io/</a>
- 查看博客站点。</p>
-<h2 id="4-新环境使用">4. 新环境使用</h2>
-<ol>
-<li>安装hugo</li>
-<li>从仓库拉取源文件</li>
-<li>修改后执行生成静态文件的命令</li>
-<li>提交所有更改</li>
-<li>访问git page网站查看</li>
-</ol></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+</div><div class="post-content mb-3"><p>本文简单介绍了管理类综合考研的形式逻辑知识点（简单命题），参考老吕管综合逻辑班。</p>
+<p>简单命题包含两类：性质命题和模态命题。其中，性质命题又称直言命题，用来判断事物具有或者不具有某种性质。</p>
+<h2 id="1-性质命题">1. 性质命题</h2>
+<h3 id="11-性质命题的结构">1.1 性质命题的结构</h3>
+<p>性质命题是由三部分组成，分别是主语、谓语、量词。</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>量词</th>
+<th>主语</th>
+<th>谓语</th>
+<th>名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>所有的</td>
+<td>小姐姐</td>
+<td>萌萌的</td>
+<td>全称肯定命题</td>
+</tr>
+<tr>
+<td>2</td>
+<td>所有的</td>
+<td>男人</td>
+<td>不是好东西</td>
+<td>全称否定命题</td>
+</tr>
+<tr>
+<td>3</td>
+<td>有的</td>
+<td>土豪</td>
+<td>有钱</td>
+<td>特称肯定命题</td>
+</tr>
+<tr>
+<td>4</td>
+<td>有的</td>
+<td>土豪</td>
+<td>不任性</td>
+<td>特称否定命题</td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td>若楠</td>
+<td>很漂亮</td>
+<td>单称肯定命题</td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td>超越</td>
+<td>不会跳舞</td>
+<td>单称否定命题</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-特殊句式">1.2 特殊句式</h3>
+<ul>
+<li>
+<p>量词的位置</p>
+<p>“全称命题”和“特称命题”的量词“所有”和“有的”，应该修饰主语而不是宾语。</p>
+<p>例如：</p>
+<p>​	老李喜欢所有颜值高的女生。（单称命题）</p>
+<p>​	所有颜值高的女生，都被老李喜欢。（全称命题）</p>
+</li>
+<li>
+<p>“一个”不一定是一个</p>
+<p>一个男孩正在踢球。（单称命题）</p>
+<p>一个男孩要经历很多事情，才能成长为男人。（全称命题）</p>
+</li>
+</ul>
+<h3 id="13-性质命题的对当关系">1.3 性质命题的对当关系</h3>
+<p><img class="img-fluid" src="nature-of-the-proposition-relation.jpg" alt="性质命题的对当关系"  loading="lazy" />
+</p>
+<ul>
+<li>反对关系：至少一假</li>
+<li>下反对关系：至少一真</li>
+<li>矛盾关系：一真一假</li>
+<li>左右两侧：上真则下真，下假则上假，下真则上不定</li>
+<li>“并非有的”等价于“所有不”</li>
+</ul>
+<h3 id="14-性质命题的负命题的替换法口诀">1.4 性质命题的负命题的替换法口诀</h3>
+<ul>
+<li>肯定变否定，否定变肯定</li>
+<li>所有变有的，有的变所有</li>
+</ul>
+<p>【易错点】</p>
+<ul>
+<li>“肯定”和“否定”指的是谓语动词，例如：
+<ul>
+<li>原命题：并非有的不漂亮的女孩不能找到男朋友。</li>
+<li>负命题：所有不漂亮的女孩能找到男朋友。</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-模态命题">2. 模态命题</h2>
+<h3 id="21-模态命题的数学意义">2.1 模态命题的数学意义</h3>
+<table>
+<thead>
+<tr>
+<th>模态命题</th>
+<th>事件A发生的概率P</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>事件A必然发生</td>
+<td>P=1</td>
+</tr>
+<tr>
+<td>事件A必然不发生</td>
+<td>P=0</td>
+</tr>
+<tr>
+<td>事件A可能发生</td>
+<td>P∈(0, 1]</td>
+</tr>
+<tr>
+<td>事件A可能不发生</td>
+<td>P∈[0, 1)</td>
+</tr>
+</tbody>
+</table>
+<p>【注意】“必然”和“事实”不等价。</p>
+<h3 id="22-模态命题的对当关系">2.2 模态命题的对当关系</h3>
+<p><img class="img-fluid" src="modal-of-the-proposition-relation.jpg" alt=""  loading="lazy" />
+</p>
+<p>​	同性质命题。</p>
+<h3 id="23-模态命题的负命题的替换法口诀">2.3 模态命题的负命题的替换法口诀</h3>
+<ul>
+<li>肯定变否定，否定变肯定</li>
+<li>必然变可能，可能变必然</li>
+</ul></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content surface">
       <div class="modal-header">
@@ -241,20 +379,20 @@
   </div>
 </div><hr /><div class="post-navs d-flex mb-3 justify-content-between">
   <div class="post-nav w-50"><div class="prev-post btn btn-sm">
-      <a href="/posts/set-up-blog-hugo/">Hugo搭建博客
+      <a href="/posts/formal-logic-2/">形式逻辑（二）- 联言、选言命题
 </a>
     </div></div>
   <div class="post-nav flex-row-reverse"><div class="next-post btn btn-sm">
-      <a href="/posts/formal-logic-1/">形式逻辑（一）- 假言命题
+      <a href="/posts/formal-logic-4/">形式逻辑（四）- 概念
 </a>
     </div></div>
 </div><section class="related-posts">
     <h3>相关文章</h3>
-    <ul class="related-posts"><li><a href="/posts/set-up-blog-hugo/">Hugo搭建博客
+    <ul class="related-posts"><li><a href="/posts/formal-logic-2/">形式逻辑（二）- 联言、选言命题
+</a></li><li><a href="/posts/formal-logic-1/">形式逻辑（一）- 假言命题
+</a></li><li><a href="/posts/deploy-blog-hugo/">Hugo博客部署
+</a></li><li><a href="/posts/set-up-blog-hugo/">Hugo搭建博客
 </a></li><li><a href="/posts/java-thread-threadlocal/">Java的线程：Thread和ThreadLocal
-</a></li><li><a href="/posts/node-install-config-win/">Node.js安装与配置（Windows）
-</a></li><li><a href="/posts/git-config-ssh/">Git配置（SSH方式）
-</a></li><li><a href="/posts/git-install-win/">Git下载安装（Windows）
 </a></li></ul>
   </section></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
   repo="https://github.com/phares-fung"

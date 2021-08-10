@@ -3,29 +3,50 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Java的线程：Thread和ThreadLocal - Phares&#39;s blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
+    <title>形式逻辑（二）- 联言、选言命题 - Phares&#39;s blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/images/favicons/manifest.json">
 <link rel="icon" href="/images/favicons/favicon.ico">
 <meta name="keywords" content="" />
-<meta name="description" content="" /><meta itemprop="name" content="Java的线程：Thread和ThreadLocal">
-<meta itemprop="description" content="本文简单介绍了 Java的线程 和 ThreadLocal。"><meta itemprop="datePublished" content="2020-08-25T16:38:55+00:00" />
-<meta itemprop="dateModified" content="2020-08-25T16:38:55+00:00" />
-<meta itemprop="wordCount" content="1382">
-<meta itemprop="keywords" content="ThreadLocal,Java线程," /><meta property="og:title" content="Java的线程：Thread和ThreadLocal" />
-<meta property="og:description" content="本文简单介绍了 Java的线程 和 ThreadLocal。" />
+<meta name="description" content="" /><meta itemprop="name" content="形式逻辑（二）- 联言、选言命题">
+<meta itemprop="description" content="本文简单介绍了管理类综合考研的形式逻辑知识点（联言、选言命题），参考老吕管综合逻辑班。"><meta itemprop="datePublished" content="2021-08-03T09:50:30+08:00" />
+<meta itemprop="dateModified" content="2021-08-03T09:50:30+08:00" />
+<meta itemprop="wordCount" content="522">
+<meta itemprop="keywords" content="MEM,逻辑," /><meta property="og:title" content="形式逻辑（二）- 联言、选言命题" />
+<meta property="og:description" content="本文简单介绍了管理类综合考研的形式逻辑知识点（联言、选言命题），参考老吕管综合逻辑班。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/java-thread-threadlocal/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-08-25T16:38:55+00:00" />
-<meta property="article:modified_time" content="2020-08-25T16:38:55+00:00" /><meta property="og:site_name" content="Phares&#39;s blog" />
-
+<meta property="og:url" content="/posts/mem/formal-logic-2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-03T09:50:30+08:00" />
+<meta property="article:modified_time" content="2021-08-03T09:50:30+08:00" /><meta property="og:site_name" content="Phares&#39;s blog" />
+<meta property="og:see_also" content="/posts/mem/logic-of-arguments-2/" /><meta property="og:see_also" content="/posts/mem/logic-of-arguments-1/" /><meta property="og:see_also" content="/posts/mem/formal-logic-4/" /><meta property="og:see_also" content="/posts/mem/formal-logic-3/" /><meta property="og:see_also" content="/posts/mem/formal-logic-1/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Java的线程：Thread和ThreadLocal"/>
-<meta name="twitter:description" content="本文简单介绍了 Java的线程 和 ThreadLocal。"/>
+<meta name="twitter:title" content="形式逻辑（二）- 联言、选言命题"/>
+<meta name="twitter:description" content="本文简单介绍了管理类综合考研的形式逻辑知识点（联言、选言命题），参考老吕管综合逻辑班。"/>
 <meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.f2209a83bfa7f733540426e3abe2edccef95ac63c8535e2b3750caccec2f85ed.css" integrity="sha256-8iCag7&#43;n9zNUBCbjq&#43;LtzO&#43;VrGPIU14rN1DKzOwvhe0=" crossorigin="anonymous"><script src="/js/bundle.min.8ef42d04b6b181f947353c61222887dc043ac1405cb15b596aecca43a15d8d38.js" integrity="sha256-jvQtBLaxgflHNTxhIiiH3AQ6wUBcsVtZauzKQ6FdjTg=" crossorigin="anonymous"></script><script defer src="/js/katex.efb27591b98224b170a1dcd34b1b5ef4a9af1ae7a0ac31442742e776e52b60f9.js" integrity="sha256-77J1kbmCJLFwodzTSxte9KmvGuegrDFEJ0LnduUrYPk=" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="/css/custom.css" crossorigin="anonymous"></head><body><header><nav class="navbar navbar-expand-xl fixed-top">
+<link rel="stylesheet" href="/css/custom.css" crossorigin="anonymous">
+<script>
+    MathJax = {
+        tex: {
+            inlineMath: [["$", "$"]],
+        },
+        displayMath: [
+            ["$$", "$$"],
+            ["\[\[", "\]\]"],
+        ],
+        svg: {
+            fontCache: "global",
+        },
+    };
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script
+        id="MathJax-script"
+        async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+></script>
+</head><body><header><nav class="navbar navbar-expand-xl fixed-top">
   <div class="container">
     <a class="navbar-brand" href="/">
       <img class="logo" alt="Logo" src="/images/logo.jpg" loading="lazy">Phares</a>
@@ -139,7 +160,7 @@
       <div class="row content">
 <div class="col-lg-8">
   <div class="container"><nav class="row" aria-label="breadcrumb">
-  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item active">Java的线程：Thread和ThreadLocal</li></ol>
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item"><a href="/posts/mem/">MEM</a></li><li class="breadcrumb-item active">形式逻辑（二）- 联言、选言命题</li></ol>
 </nav><article class="post row surface"><div class="post-panel-wrapper">
   <div class="post-panel d-flex flex-column">
     <a id="sidebarToggler" class="action d-none d-lg-block" role="button">
@@ -161,12 +182,12 @@
 </a>
   </div>
 </div>
-<h1 class="post-title my-3">Java的线程：Thread和ThreadLocal
+<h1 class="post-title my-3">形式逻辑（二）- 联言、选言命题
 </h1><div class="post-meta mb-3"><span class="post-date me-2">
-    <i class="fas fa-fw fa-calendar-alt"></i>2020-08-25
+    <i class="fas fa-fw fa-calendar-alt"></i>2021-08-03
   </span><span class="post-reading-time me-2">
-    <i class="fas fa-fw fa-coffee"></i>3 分钟阅读
-  </span><a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-taxonomy">#后端</a><a href="/series/java%E5%9F%BA%E7%A1%80/" class="post-taxonomy">#Java基础</a><a href="/tags/threadlocal/" class="post-taxonomy">#ThreadLocal</a><a href="/tags/java%E7%BA%BF%E7%A8%8B/" class="post-taxonomy">#Java线程</a></div>
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
+  </span><a href="/categories/%E8%80%83%E7%A0%94/" class="post-taxonomy">#考研</a><a href="/series/mem/" class="post-taxonomy">#MEM</a><a href="/tags/mem/" class="post-taxonomy">#MEM</a><a href="/tags/%E9%80%BB%E8%BE%91/" class="post-taxonomy">#逻辑</a></div>
 <div class="offcanvas offcanvas-end surface" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasTOCLabel">目录</h5>
@@ -177,149 +198,127 @@
   <div class="offcanvas-body">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#为什么需要多线程">为什么需要多线程</a></li>
-    <li><a href="#thread是什么">Thread是什么</a></li>
-    <li><a href="#thread的底层模型">Thread的底层模型</a></li>
-    <li><a href="#thread的生命周期">Thread的生命周期</a></li>
-    <li><a href="#threadlocal详解与源码分析">ThreadLocal详解与源码分析</a></li>
-    <li><a href="#协程的优缺点">协程的优缺点</a></li>
+    <li><a href="#1-联言选言命题">1. 联言、选言命题</a>
+      <ul>
+        <li><a href="#11-并且或者要么的含义">1.1 并且、或者、要么的含义</a></li>
+        <li><a href="#12-真值表">1.2 真值表</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-德摩根定律">2. 德摩根定律</a></li>
+    <li><a href="#3-或者要么与箭头的关系">3. 或者、要么与箭头的关系</a></li>
   </ul>
 </nav>
   </div>
-</div><div class="post-content mb-3"><p>本文简单介绍了 <code>Java的线程</code> 和 <code>ThreadLocal</code>。</p>
-<h2 id="为什么需要多线程">为什么需要多线程</h2>
+</div><div class="post-content mb-3"><p>本文简单介绍了管理类综合考研的形式逻辑知识点（联言、选言命题），参考老吕管综合逻辑班。</p>
+<h2 id="1-联言选言命题">1. 联言、选言命题</h2>
+<h3 id="11-并且或者要么的含义">1.1 并且、或者、要么的含义</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">符号</th>
+<th style="text-align:center">读作</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">联言命题</td>
+<td style="text-align:center">A∧B</td>
+<td style="text-align:center">A并且B</td>
+<td style="text-align:center">事件A和事件B都发生</td>
+</tr>
+<tr>
+<td style="text-align:center">相容选言命题</td>
+<td style="text-align:center">A∨B</td>
+<td style="text-align:center">A或者B</td>
+<td style="text-align:center">事件A和事件B至少发生一个</td>
+</tr>
+<tr>
+<td style="text-align:center">不相容选言命题</td>
+<td style="text-align:center">A∀B</td>
+<td style="text-align:center">要么A，要么B</td>
+<td style="text-align:center">事件A和事件B发生且仅发生一个</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-真值表">1.2 真值表</h3>
+<table>
+    <tr>
+        <th colspan="2">已知</th>
+        <th colspan="4">判断真假</th>
+    </tr>
+    <tr>
+        <td>A</td>
+        <td>B</td>
+        <td>A∧B</td>
+        <td>A∨B</td>
+        <td>A∀B</td>
+        <td>A->B <==> ┐A∨B</td>
+    </tr>
+  	<tr>
+        <td>真</td>
+        <td>真</td>
+        <td>真</td>
+        <td>真</td>
+        <td>假</td>
+        <td>真</td>
+    </tr>
+    <tr style="color:blue">
+        <td>真</td>
+        <td>假</td>
+        <td>假</td>
+        <td>真</td>
+        <td>真</td>
+        <td>假</td>
+    </tr>
+     <tr>
+        <td>假</td>
+        <td>真</td>
+        <td>假</td>
+        <td>真</td>
+        <td>真</td>
+        <td>真</td>
+    </tr>
+     <tr>
+        <td>假</td>
+        <td>假</td>
+        <td>假</td>
+        <td>假</td>
+        <td>假</td>
+        <td>真</td>
+    </tr>
+</table>
 <ul>
-<li>cpu/内存/IO的巨大性能差异</li>
-<li>线程的本质是一段可以执行代码，是操作系统能够进行运算调度的最小单元</li>
-<li>多线程的优点
+<li><font color=blue>A-&gt;B 与 A∧$\overline{B}$ 矛盾</font>
 <ul>
-<li>多个执行流，并发执行</li>
+<li><font color=blue>A-&gt;B为假，则 A∧$\overline{B}$ 为真</font></li>
+<li><font color=blue>A-&gt;B为真，则 A∧$\overline{B}$ 为假</font></li>
 </ul>
 </li>
-<li>多线程的缺点
-<ul>
-<li>占用资源：每个线程都有自己独立的方法栈</li>
-<li>慢：需要频繁切换上下文，占用大量cpu时间
-<ul>
-<li>能不能让上下文切换尽可能少
-<ul>
-<li>协程（用户态线程）：在一个线程中，再开启一些小的工作单元</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="thread是什么">Thread是什么</h2>
+<h2 id="2-德摩根定律">2. 德摩根定律</h2>
 <ul>
 <li>
-<p>Thread类的每一个实例代表一个JVM中的线程，start()之后，且未结束</p>
+<p>$\overline{（A∧B）}$ = $\overline{A}$∨$\overline{B}$</p>
 </li>
 <li>
-<p>Runable/Callable都不是线程</p>
+<p>$\overline{（A∨B）}$ = $\overline{A}$∧$\overline{B}$</p>
 </li>
 <li>
-<p>Thread.start()之后，JVM中就增加一个执行流和一套方法栈，每个方法栈的底部只能是main()或者Thread.run()方法</p>
-<p>** 异常只能在当前方法栈中抛，无法跨方法栈</p>
-<ul>
-<li>不同的执行流的同步执行是一切线程问题的根源</li>
-</ul>
+<p>$\overline{（A∀B）}$ = （$\overline{A}$∧$\overline{B}$）∨（A∧B），此处中间的∨也可以写为∀</p>
 </li>
 </ul>
-<h2 id="thread的底层模型">Thread的底层模型</h2>
+<h2 id="3-或者要么与箭头的关系">3. 或者、要么与箭头的关系</h2>
 <ul>
-<li>
-<p>Thread类的每一个实例代表一个JVM中的线程</p>
+<li>箭头变或者：A-&gt;B = $\overline{A}$∨B</li>
+<li>或者变箭头：A∨B = $\overline{A}$-&gt;B = $\overline{B}$-&gt;A</li>
+<li>要么推箭头：A∀B可以推出：
 <ul>
-<li>在Linux中，称为轻量级进程，和进程无本质区别（进程组）</li>
-<li>在Windows中上使用系统线程</li>
-</ul>
-<p>** 线程和进程的区别：线程有一块共享内存</p>
-</li>
-<li>
-<p>优点</p>
-<ul>
-<li>简单，直接依赖操作系统的调度器</li>
-</ul>
-</li>
-<li>
-<p>缺点</p>
-<ul>
-<li>占用资源多</li>
-<li>上下文切换慢</li>
-<li>不灵活，无法实现灵活的优先级</li>
-</ul>
-</li>
-</ul>
-<h2 id="thread的生命周期">Thread的生命周期</h2>
-<p>在Thread类中有一个枚举类State，代表了线程的状态</p>
-<ul>
-<li>
-<p>NEW</p>
-<p>新建了一个线程，还未启动</p>
-</li>
-<li>
-<p>RUNNABLE</p>
-<p>在JVM中，正在执行的状态，也可能是正在等待从操作系统获取资源的状态（例如发起IO调用，虽然放弃了cpu，但还是处于RUNNABLE状态）</p>
-</li>
-<li>
-<p>BLOCKED</p>
-<p>在JVM中，当前线程正在等3待synchronized锁的状态</p>
-</li>
-<li>
-<p>WAITTING</p>
-<p>线程处于等待状态（调用了wait()、join()等方法）</p>
-</li>
-<li>
-<p>TIMED_WAITTING</p>
-<p>线程处于TIMED_WAITTING状态（调用了Thread.sleep(long)、wait(long)、join(long)等方法）</p>
-</li>
-<li>
-<p>TERMINATED</p>
-<p>线程已经完成执行</p>
-</li>
-</ul>
-<h2 id="threadlocal详解与源码分析">ThreadLocal详解与源码分析</h2>
-<ul>
-<li>各自线程独立共享全局变量，不同线程之间相互隔离</li>
-<li>在Thread类中有ThreadLocal.ThreadLocalMap实例的引用</li>
-<li>ThreadLocal中的内部类ThreadLocalMap
-<ul>
-<li>key为当前线程，value可以通过set方法进行设置</li>
-<li>通过get方法获取本线程设置的value值</li>
-<li>key为弱引用
-<ul>
-<li>为了尽可能避免产生内存泄漏（set和get方法会对无效的数据进行清除）</li>
-<li>但不能完全避免内存泄漏，例如在线程池中，当前ThreadLocal被回收了，但是当前线程没有终止，而是返回放到了线程池中，因此如果这个线程一直不被使用，就产生了内存泄漏，所以尽量在使用后调用remove()方法主动销毁</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>在Thread类中有一个ThreadLocal.ThreadLocalMap inheritableThreadLocals 实例对象，可以通过这个map获取到父线程设置的数据，进行父子线程数据共享（子线程init的时候，会判断父线程inheritableThreadLocals 是否有值，有则赋值给子线程的inheritableThreadLocals 实例）</li>
-</ul>
-<h2 id="协程的优缺点">协程的优缺点</h2>
-<ul>
-<li>操作系统的内核线程的缺点
-<ul>
-<li>慢：上下文切换极其耗时，调度的时候需要发起系统调用，在内核态和用户态之间切换</li>
-<li>大： 独立的方法栈需要很多的空间</li>
-</ul>
-</li>
-<li>协程
-<ul>
-<li>快：始终占用cpu，在用户态</li>
-<li>小：可以方便的实现上百万的并发度</li>
-</ul>
-</li>
-<li>解决的问题
-<ul>
-<li>多线程调度较慢，占用资源过多的问题</li>
-</ul>
-</li>
-<li>不解决的问题
-<ul>
-<li>并发问题：死锁/竞争条件</li>
+<li>A-&gt;$\overline{B}$</li>
+<li>$\overline{A}$-&gt;B</li>
+<li>B-&gt;$\overline{A}$</li>
+<li>$\overline{B}$-&gt;A</li>
 </ul>
 </li>
 </ul></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
@@ -349,19 +348,20 @@
   </div>
 </div><hr /><div class="post-navs d-flex mb-3 justify-content-between">
   <div class="post-nav w-50"><div class="prev-post btn btn-sm">
-      <a href="/posts/node-install-config-win/">Node.js安装与配置（Windows）
+      <a href="/posts/mem/formal-logic-1/">形式逻辑（一）- 假言命题
 </a>
     </div></div>
   <div class="post-nav flex-row-reverse"><div class="next-post btn btn-sm">
-      <a href="/posts/set-up-blog-hugo/">Hugo搭建博客
+      <a href="/posts/mem/formal-logic-3/">形式逻辑（三）- 简单命题
 </a>
     </div></div>
 </div><section class="related-posts">
     <h3>相关文章</h3>
-    <ul class="related-posts"><li><a href="/posts/node-install-config-win/">Node.js安装与配置（Windows）
-</a></li><li><a href="/posts/git-config-ssh/">Git配置（SSH方式）
-</a></li><li><a href="/posts/git-install-win/">Git下载安装（Windows）
-</a></li><li><a href="/posts/jdk-install-online-linux/">JDK1.8在线安装（Linux）
+    <ul class="related-posts"><li><a href="/posts/mem/formal-logic-1/">形式逻辑（一）- 假言命题
+</a></li><li><a href="/posts/deploy-blog-hugo/">Hugo博客部署
+</a></li><li><a href="/posts/set-up-blog-hugo/">Hugo搭建博客
+</a></li><li><a href="/posts/java-thread-threadlocal/">Java的线程：Thread和ThreadLocal
+</a></li><li><a href="/posts/node-install-config-win/">Node.js安装与配置（Windows）
 </a></li></ul>
   </section></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
   repo="https://github.com/phares-fung"

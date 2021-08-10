@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>专栏 on Phares&#39;s blog</title>
+    <link>/series/</link>
+    <description>Recent content in 专栏 on Phares&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2021-{year} Phares Fung. All Rights Reserved.</copyright>
+    <lastBuildDate>Wed, 04 Aug 2021 20:05:56 +0800</lastBuildDate><atom:link href="/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MEM</title>
+      <link>/series/mem/</link>
+      <pubDate>Wed, 04 Aug 2021 20:05:56 +0800</pubDate>
+      
+      <guid>/series/mem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>博客搭建</title>
+      <link>/series/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+      <pubDate>Tue, 27 Jul 2021 14:57:18 +0800</pubDate>
+      
+      <guid>/series/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java基础</title>
+      <link>/series/java%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Tue, 25 Aug 2020 16:38:55 +0000</pubDate>
+      
+      <guid>/series/java%E5%9F%BA%E7%A1%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>软件安装</title>
+      <link>/series/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Wed, 19 Aug 2020 16:00:00 +0000</pubDate>
+      
+      <guid>/series/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

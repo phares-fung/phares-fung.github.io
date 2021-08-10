@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Java基础 - 专栏 - Phares&#39;s blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<link rel="icon" href="/images/favicons/favicon.ico">
+<meta name="keywords" content="Phares, blog, 博客" />
+<meta name="description" content="Phares&#39; blog" /><meta itemprop="name" content="Java基础">
+<meta itemprop="description" content="Phares&#39; blog"><meta property="og:title" content="Java基础" />
+<meta property="og:description" content="Phares&#39; blog" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/series/java%E5%9F%BA%E7%A1%80/" /><meta property="og:site_name" content="Phares&#39;s blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java基础"/>
+<meta name="twitter:description" content="Phares&#39; blog"/>
+<link rel="alternate" type="application/rss+xml" href="/series/java%E5%9F%BA%E7%A1%80/index.xml" title="Phares's blog" /><meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.f2209a83bfa7f733540426e3abe2edccef95ac63c8535e2b3750caccec2f85ed.css" integrity="sha256-8iCag7&#43;n9zNUBCbjq&#43;LtzO&#43;VrGPIU14rN1DKzOwvhe0=" crossorigin="anonymous"><script src="/js/bundle.min.8ef42d04b6b181f947353c61222887dc043ac1405cb15b596aecca43a15d8d38.js" integrity="sha256-jvQtBLaxgflHNTxhIiiH3AQ6wUBcsVtZauzKQ6FdjTg=" crossorigin="anonymous"></script><script defer src="/js/katex.efb27591b98224b170a1dcd34b1b5ef4a9af1ae7a0ac31442742e776e52b60f9.js" integrity="sha256-77J1kbmCJLFwodzTSxte9KmvGuegrDFEJ0LnduUrYPk=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/custom.css" crossorigin="anonymous"></head><body><header><nav class="navbar navbar-expand-xl fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img class="logo" alt="Logo" src="/images/logo.jpg" loading="lazy">Phares</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-1 mb-2 mb-lg-0"><form class="search-bar d-flex ms-1" action="/search">
+  <div class="input-group input-group-sm">
+    <button class="btn btn-search disabled position-absolute left-0" type="submit"><i class="fas fa-fw fa-search"></i></button>
+    <input class="form-control rounded-pill" id="searchQuery" name="q" type="search" aria-label="Search">
+  </div>
+</form></ul><ul class="navbar-nav me-1 mb-2 mb-lg-0 me-1 ms-auto"><li class="nav-item">
+          <a class="nav-link" href="/archives/">
+            <i class="fas fa-fw fa-file-archive"></i>归档
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/categories/">
+            <i class="fas fa-fw fa-folder"></i>分类
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/series/">
+            <i class="fas fa-fw fa-columns"></i>专栏
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/tags/">
+            <i class="fas fa-fw fa-tags"></i>标签
+          </a>
+        </li><li class="nav-item">
+  <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasSettings" role="button"
+    aria-controls="offcanvasSettings">
+    <i class="fas fa-fw fa-sliders-h"></i> 设置
+  </a>
+</li>
+
+<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasSettings"
+  aria-labelledby="offcanvasSettingsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" w id="offcanvasSettingsLabel"><i class="fas fa-fw fa-sliders-h"></i> 设置</h5>
+    <a role="button" data-bs-dismiss="offcanvas" aria-label="Close">
+      <span class="fas fa-2x fa-fw fa-times"></span>
+    </a>
+  </div>
+  <div class="offcanvas-body"><section class="setting">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-adjust"></i> 模式</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="modeSwitcher">
+      </div>
+    </div>
+  </form>
+</section>
+<section class="setting">
+  <form class="font-size-switcher-form row">
+    <div class="col-auto">
+      <label for="fontSize" class="form-label"><i class="fas fa-fw fa-font"></i> 字体大小</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+    </div>
+  </form>
+</section>
+
+<section class="setting palettes">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-palette"></i> 配色</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <span id="btnPalette" class="btn btn-sm"><i class="fas fa-eye-dropper"></i></span>
+    </div>
+  </form>
+  <div class="container mt-2 visually-hidden" id="palettePicker">
+    <div class="btn-group"><button type="button" id="palette-blue" title="蓝色" 
+          class="btn btn-sm palette bg-blue d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-blue-gray" title="蓝灰色" 
+          class="btn btn-sm palette bg-blue-gray d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-brown" title="棕色" 
+          class="btn btn-sm palette bg-brown d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-cyan" title="青色" 
+          class="btn btn-sm palette bg-cyan d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-green" title="绿色" 
+          class="btn btn-sm palette bg-green d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-indigo" title="靛青色" 
+          class="btn btn-sm palette bg-indigo d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-orange" title="橙色" 
+          class="btn btn-sm palette bg-orange d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-pink" title="粉色" 
+          class="btn btn-sm palette bg-pink d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-purple" title="紫色" 
+          class="btn btn-sm palette bg-purple d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-red" title="红色" 
+          class="btn btn-sm palette bg-red d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-teal" title="蓝绿色" 
+          class="btn btn-sm palette bg-teal d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-yellow" title="黄色" 
+          class="btn btn-sm palette bg-yellow d-flex align-items-center justify-content-center">
+        </button></button>
+    </div>
+  </div>
+</section></div>
+</div></ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-lg-8">
+  <div class="container"><nav class="row" aria-label="breadcrumb">
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/series/">专栏</a></li><li class="breadcrumb-item active">Java基础</li></ol>
+</nav><div class="posts mb-4"><article class="post row surface"><div class="post-body">
+        <h2 class="post-title mb-4"><a href="/posts/java-thread-threadlocal/">Java的线程：Thread和ThreadLocal
+</a></h2><div class="post-meta mb-3"><span class="post-date me-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2020-08-25
+  </span><span class="post-reading-time me-2">
+    <i class="fas fa-fw fa-coffee"></i>3 分钟阅读
+  </span><a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-taxonomy">#后端</a><a href="/series/java%E5%9F%BA%E7%A1%80/" class="post-taxonomy">#Java基础</a><a href="/tags/threadlocal/" class="post-taxonomy">#ThreadLocal</a><a href="/tags/java%E7%BA%BF%E7%A8%8B/" class="post-taxonomy">#Java线程</a></div>
+<div class="post-summary mb-3">
+          <p>本文简单介绍了 <code>Java的线程</code> 和 <code>ThreadLocal</code>。</p>
+        </div>
+      </div>
+    </article></div><div class="row table-responsive mb-3"></div>
+</div>
+
+
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container"><section class="profile surface row text-center">
+  <div class="col-12 d-flex align-items-center justify-content-center"><img class="profile-avatar rounded-circle" src="/images/profile.webp" alt="Phares Fung" loading="lazy"></div>
+  <div class="col-12 profile-meta"><div class="profile-name">Phares Fung</div><div class="profile-bio">Java开发工程师</div><div class="profile-company"><i class="fas fa-fw fa-building"></i>海康威视</div><div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>四川成都</div><div class="profile-about"><i class="fas fa-fw fa-info-circle"></i><a href="/about/">个人简历</a></div></div>
+</section>
+  <section class="recent-posts row surface">
+  <h4>最近文章</h4>
+  <ul><li><a href="/posts/mem/logic-of-arguments-2/">论证逻辑（二）- 因果
+</a></li><li><a href="/posts/mem/logic-of-arguments-1/">论证逻辑（一）- 论证
+</a></li><li><a href="/posts/mem/formal-logic-4/">形式逻辑（四）- 概念
+</a></li><li><a href="/posts/mem/formal-logic-3/">形式逻辑（三）- 简单命题
+</a></li><li><a href="/posts/mem/formal-logic-2/">形式逻辑（二）- 联言、选言命题
+</a></li></ul>
+</section><section class="taxonomy-categories row surface">
+      <h4>
+        <a href="/categories">分类</a>
+      </h4>
+      <div><a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="工具">
+          工具 <span class="badge rounded-pill">6</span>
+        </a><a href="/categories/%E8%80%83%E7%A0%94/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="考研">
+          考研 <span class="badge rounded-pill">6</span>
+        </a><a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="后端">
+          后端 <span class="badge rounded-pill">1</span>
+        </a></div>
+    </section><section class="taxonomy-series row surface">
+      <h4>
+        <a href="/series">专栏</a>
+      </h4>
+      <div><a href="/series/mem/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="MEM">
+          MEM <span class="badge rounded-pill">6</span>
+        </a><a href="/series/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="软件安装">
+          软件安装 <span class="badge rounded-pill">4</span>
+        </a><a href="/series/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="博客搭建">
+          博客搭建 <span class="badge rounded-pill">2</span>
+        </a><a href="/series/java%E5%9F%BA%E7%A1%80/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Java基础">
+          Java基础 <span class="badge rounded-pill">1</span>
+        </a></div>
+    </section><section class="taxonomy-tags row surface">
+      <h4>
+        <a href="/tags">标签</a>
+      </h4>
+      <div><a href="/tags/mem/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="MEM">
+          MEM <span class="badge rounded-pill">6</span>
+        </a><a href="/tags/%E9%80%BB%E8%BE%91/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="逻辑">
+          逻辑 <span class="badge rounded-pill">6</span>
+        </a><a href="/tags/git/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Git">
+          Git <span class="badge rounded-pill">2</span>
+        </a><a href="/tags/hugo/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="hugo">
+          hugo <span class="badge rounded-pill">2</span>
+        </a><a href="/tags/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="博客">
+          博客 <span class="badge rounded-pill">2</span>
+        </a><a href="/tags/java%E7%BA%BF%E7%A8%8B/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Java线程">
+          Java线程 <span class="badge rounded-pill">1</span>
+        </a><a href="/tags/jdk1.8/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="JDK1.8">
+          JDK1.8 <span class="badge rounded-pill">1</span>
+        </a><a href="/tags/node.js/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Node.js">
+          Node.js <span class="badge rounded-pill">1</span>
+        </a><a href="/tags/threadlocal/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="ThreadLocal">
+          ThreadLocal <span class="badge rounded-pill">1</span>
+        </a></div>
+    </section></div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><li class="nav-item">
+    <a class="nav-link social-link" href="mailto:uceeso@163.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a>
+  </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="https://github.com/phares-fung" title="GitHub">
+        <i class="fa-fw fa-2x fab fa-github"></i>
+      </a>
+    </li><li class="nav-item">
+      <a class="nav-link social-link" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=328123518&amp;site=qq&amp;menu=yes" title="QQ">
+        <i class="fa-fw fa-2x fab fa-qq"></i>
+      </a>
+    </li><li class="nav-item">
+    <a class="nav-link social-link" target="_blank" href="/series/java%E5%9F%BA%E7%A1%80/index.xml" title="RSS">
+      <i class="fas fa-fw fa-2x fa-rss"></i>
+    </a>
+  </li></nav>
+<div class="copyright mb-2">
+  Copyright © 2021-2021 Phares Fung. All Rights Reserved.
+</div>
+</footer>
+<a id="btnScrollToTop" class="btn-scroll-to-top">
+  <i class="fas fa-fw fa-chevron-circle-up fa-2x"></i>
+</a>
+</body>
+</html>

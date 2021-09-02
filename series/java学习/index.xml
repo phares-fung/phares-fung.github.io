@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java学习 on Phares&#39;s blog</title>
+    <link>/series/java%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in Java学习 on Phares&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright © 2021-{year} Phares Fung. All Rights Reserved.</copyright>
+    <lastBuildDate>Thu, 02 Sep 2021 10:57:51 +0800</lastBuildDate><atom:link href="/series/java%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java简介</title>
+      <link>/posts/java-se-introduction/</link>
+      <pubDate>Thu, 02 Sep 2021 10:57:51 +0800</pubDate>
+      
+      <guid>/posts/java-se-introduction/</guid>
+      <description>&lt;p&gt;本文针对零基础的同学，简单介绍计算机以及Java的相关知识。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

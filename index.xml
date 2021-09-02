@@ -8,11 +8,11 @@
     <copyright>Copyright © 2021-{year} Phares Fung. All Rights Reserved.</copyright>
     <lastBuildDate>Thu, 02 Sep 2021 10:57:51 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Java入门知识</title>
-      <link>/posts/java-base-introduction/</link>
+      <title>Java简介</title>
+      <link>/posts/java-se-introduction/</link>
       <pubDate>Thu, 02 Sep 2021 10:57:51 +0800</pubDate>
       
-      <guid>/posts/java-base-introduction/</guid>
+      <guid>/posts/java-se-introduction/</guid>
       <description>&lt;p&gt;本文针对零基础的同学，简单介绍计算机以及Java的相关知识。&lt;/p&gt;</description>
     </item>
     
@@ -90,10 +90,10 @@
     
     <item>
       <title>Java的线程：Thread和ThreadLocal</title>
-      <link>/posts/java-base-java-thread-threadlocal/</link>
+      <link>/posts/java-se-java-thread-threadlocal/</link>
       <pubDate>Tue, 25 Aug 2020 16:38:55 +0000</pubDate>
       
-      <guid>/posts/java-base-java-thread-threadlocal/</guid>
+      <guid>/posts/java-se-java-thread-threadlocal/</guid>
       <description>&lt;p&gt;本文简单介绍了 &lt;code&gt;Java的线程&lt;/code&gt; 和 &lt;code&gt;ThreadLocal&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
@@ -126,10 +126,10 @@
     
     <item>
       <title>JDK1.8在线安装（Linux）</title>
-      <link>/posts/java-base-jdk-install-online-linux/</link>
+      <link>/posts/java-jdk-install-online-linux/</link>
       <pubDate>Wed, 19 Aug 2020 10:00:00 +0000</pubDate>
       
-      <guid>/posts/java-base-jdk-install-online-linux/</guid>
+      <guid>/posts/java-jdk-install-online-linux/</guid>
       <description>&lt;p&gt;本文简单介绍了如何在Linux环境下安装 &lt;code&gt;JDK1.8&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     

@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Java简介 - Phares&#39;s blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<link rel="icon" href="/images/favicons/favicon.ico">
+<meta name="keywords" content="" />
+<meta name="description" content="" /><meta itemprop="name" content="Java简介">
+<meta itemprop="description" content="本文针对零基础的同学，简单介绍计算机以及Java的相关知识。"><meta itemprop="datePublished" content="2021-09-02T10:57:51+08:00" />
+<meta itemprop="dateModified" content="2021-09-02T10:57:51+08:00" />
+<meta itemprop="wordCount" content="990">
+<meta itemprop="keywords" content="Java," /><meta property="og:title" content="Java简介" />
+<meta property="og:description" content="本文针对零基础的同学，简单介绍计算机以及Java的相关知识。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/java-se-introduction/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-09-02T10:57:51+08:00" />
+<meta property="article:modified_time" content="2021-09-02T10:57:51+08:00" /><meta property="og:site_name" content="Phares&#39;s blog" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Java简介"/>
+<meta name="twitter:description" content="本文针对零基础的同学，简单介绍计算机以及Java的相关知识。"/>
+<meta data-name="palette" content="blue"><link rel="preload" href="/css/bundle.min.7fc0dcec4043950586f53c3fed9b2fbf28d6f4e4812a1e62a74b35afe159de07.css" integrity="sha256-f8Dc7EBDlQWG9Tw/7ZsvvyjW9OSBKh5ip0s1r&#43;FZ3gc=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/bundle.min.7fc0dcec4043950586f53c3fed9b2fbf28d6f4e4812a1e62a74b35afe159de07.css" integrity="sha256-f8Dc7EBDlQWG9Tw/7ZsvvyjW9OSBKh5ip0s1r&#43;FZ3gc=" crossorigin="anonymous"></noscript><script src="/js/bundle.min.2cc838447db0150b5f7744f7e45d080a22e1fcfd6810d86e9f3075136d99eca4.js" integrity="sha256-LMg4RH2wFQtfd0T35F0ICiLh/P1oENhunzB1E22Z7KQ=" crossorigin="anonymous"></script><script defer src="/js/katex.675a54ca18bdabee58c8e458c85196917e0496ce1a5b6f95b6b9cb70d01fe1d8.js" integrity="sha256-Z1pUyhi9q&#43;5YyORYyFGWkX4Els4aW2&#43;VtrnLcNAf4dg=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/custom.css" crossorigin="anonymous"></head><body><header><nav class="navbar navbar-expand-xl fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img class="logo" alt="Logo" src="/images/logo.jpg"
+   width="1080" height="1080" loading="lazy" />
+Phares</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-1 mb-2 mb-lg-0"><form class="search-bar d-flex ms-1" action="/search">
+  <div class="input-group input-group-sm">
+    <button class="btn btn-search disabled position-absolute left-0" type="submit" aria-label="submit"><i class="fas fa-fw fa-search"></i></button>
+    <input class="form-control rounded-pill" id="searchQuery" name="q" type="search" aria-label="Search">
+  </div>
+</form></ul><ul class="navbar-nav me-1 mb-2 mb-lg-0 me-1 ms-auto"><li class="nav-item">
+          <a class="nav-link" href="/archives/">
+            <i class="fas fa-fw fa-file-archive"></i>归档
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/categories/">
+            <i class="fas fa-fw fa-folder"></i>分类
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/series/">
+            <i class="fas fa-fw fa-columns"></i>专栏
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/tags/">
+            <i class="fas fa-fw fa-tags"></i>标签
+          </a>
+        </li><li class="nav-item">
+  <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasSettings" role="button"
+    aria-controls="offcanvasSettings">
+    <i class="fas fa-fw fa-sliders-h"></i> 设置
+  </a>
+</li>
+
+<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasSettings"
+  aria-labelledby="offcanvasSettingsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" w id="offcanvasSettingsLabel"><i class="fas fa-fw fa-sliders-h"></i> 设置</h5>
+    <a role="button" data-bs-dismiss="offcanvas" aria-label="Close">
+      <span class="fas fa-2x fa-fw fa-times"></span>
+    </a>
+  </div>
+  <div class="offcanvas-body"><section class="setting">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-adjust"></i> 模式</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="modeSwitcher">
+      </div>
+    </div>
+  </form>
+</section>
+<section class="setting">
+  <form class="font-size-switcher-form row">
+    <div class="col-auto">
+      <label for="fontSize" class="form-label"><i class="fas fa-fw fa-font"></i> 字体大小</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+    </div>
+  </form>
+</section>
+
+<section class="setting palettes">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-palette"></i> 配色</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <span id="btnPalette" class="btn btn-sm"><i class="fas fa-eye-dropper"></i></span>
+    </div>
+  </form>
+  <div class="container mt-2 visually-hidden" id="palettePicker">
+    <div class="btn-group"><button type="button" id="palette-blue" title="蓝色" 
+          class="btn btn-sm palette bg-blue d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-blue-gray" title="蓝灰色" 
+          class="btn btn-sm palette bg-blue-gray d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-brown" title="棕色" 
+          class="btn btn-sm palette bg-brown d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-cyan" title="青色" 
+          class="btn btn-sm palette bg-cyan d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-green" title="绿色" 
+          class="btn btn-sm palette bg-green d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-indigo" title="靛青色" 
+          class="btn btn-sm palette bg-indigo d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-orange" title="橙色" 
+          class="btn btn-sm palette bg-orange d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-pink" title="粉色" 
+          class="btn btn-sm palette bg-pink d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-purple" title="紫色" 
+          class="btn btn-sm palette bg-purple d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-red" title="红色" 
+          class="btn btn-sm palette bg-red d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-teal" title="蓝绿色" 
+          class="btn btn-sm palette bg-teal d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-yellow" title="黄色" 
+          class="btn btn-sm palette bg-yellow d-flex align-items-center justify-content-center">
+        </button></button>
+    </div>
+  </div>
+</section></div>
+</div></ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-lg-8">
+  <div class="container"><nav class="row" aria-label="breadcrumb">
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item active">Java简介</li></ol>
+</nav><article class="post row surface"><div class="post-panel-wrapper">
+  <div class="post-panel d-flex flex-column">
+    <a id="sidebarToggler" class="action d-none d-lg-block" role="button">
+  <i class="fas fa-fw fa-expand-alt fa-rotate-45"></i>
+</a>
+  
+    
+
+    <a class="action btn-reward" role="button" data-bs-toggle="modal" data-bs-target="#rewardModal" title="打赏">
+  <i class="fas fa-fw fa-medal"></i>
+</a>
+    <a class="action" data-bs-container="body" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom"
+  data-bs-trigger="focus" tabindex="0"
+  data-bs-content="&lt;a target=&#34;_blank&#34; rel=&#34;license noopener noreferrer&#34; href=&#34;https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh&#34;&gt;CC BY-NC-ND 4.0 &lt;i class=&#34;fab fa-fw fa-creative-commons&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-by&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-nc&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-nd&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+">
+  <i class="fas fa-fw fa-copyright"></i>
+</a>
+    <a id="btnTOC" class="fas fa-fw fa-list-alt" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
+</a>
+  </div>
+</div>
+<h1 class="post-title my-3">Java简介
+</h1><div class="post-meta mb-3"><span class="post-date me-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2021-09-02
+  </span><span class="post-reading-time me-2">
+    <i class="fas fa-fw fa-coffee"></i>2 分钟阅读
+  </span><span class="post-taxonomies"><a href="/categories/java/" class="post-taxonomy">Java</a><a href="/series/java%E5%AD%A6%E4%B9%A0/" class="post-taxonomy">Java学习</a><a href="/tags/java/" class="post-taxonomy">Java</a></span>
+</div>
+<div class="offcanvas offcanvas-end surface" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasTOCLabel">目录</h5>
+    <a role="button" data-bs-dismiss="offcanvas" aria-label="Close">
+      <span class="fas fa-2x fa-fw fa-times"></span>
+    </a>
+  </div>
+  <div class="offcanvas-body">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一计算机基础理论">一、计算机基础理论</a>
+      <ul>
+        <li><a href="#1-计算机组成">1. 计算机组成</a></li>
+        <li><a href="#2-计算机中的程序">2. 计算机中的程序</a></li>
+        <li><a href="#3-计算机语言的发展史">3. 计算机语言的发展史</a></li>
+      </ul>
+    </li>
+    <li><a href="#二java技术平台介绍">二、Java技术平台介绍</a>
+      <ul>
+        <li><a href="#1-javase">1. JavaSE</a></li>
+        <li><a href="#2-javaee">2. JavaEE</a></li>
+        <li><a href="#3-javame">3. JavaME</a></li>
+      </ul>
+    </li>
+    <li><a href="#三java语言的特点">三、Java语言的特点</a></li>
+    <li><a href="#四java环境">四、Java环境</a></li>
+  </ul>
+</nav>
+  </div>
+</div><div class="post-content mb-3"><p>本文针对零基础的同学，简单介绍计算机以及Java的相关知识。</p>
+<h2 id="一计算机基础理论">一、计算机基础理论</h2>
+<h3 id="1-计算机组成">1. 计算机组成</h3>
+<ul>
+<li>硬件：指完成输入、存储、处理、输出功能的具体设备。
+<ul>
+<li>输入设备：向计算机输入数据和信息的设备。例如：键盘、鼠标、摄像头、扫描仪。</li>
+<li>CPU（中央处理器）：一台计算机的运算核心和控制核心。主要用来解释计算机指令以及处理计算机软件中的数据。</li>
+<li>输出设备：用于接收计算机数据的输出显示、打印、声音设备操作等。例如：显示器、音箱、打印机、绘图仪。</li>
+<li>存储器：用于保存信息的记忆设备，用来存放程序和数据。例如：内存条、光盘、硬盘、U盘。</li>
+</ul>
+</li>
+<li>软件：用来控制硬件准确有效地完成各种功能。是一系列按照特定顺序组织的计算机数据和指令的集合。
+<ul>
+<li>系统软件：负责管理计算机系统中各种独立的硬件，使得它们可以协调工作。例如：Windows10，Linux、Mac</li>
+<li>应用软件：为了某种特定的用途而被开发的软件。例如：QQ、微信</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-计算机中的程序">2. 计算机中的程序</h3>
+<p>计算机程序：为了让计算机执行某些操作或者解决某个问题而编写的一系列有序指令的集合。</p>
+<p>编写程序的语言就是计算机语言。Java就是多种语言中的一种。</p>
+<h3 id="3-计算机语言的发展史">3. 计算机语言的发展史</h3>
+<ul>
+<li>
+<p><strong>机器语言</strong></p>
+<ul>
+<li>第一代计算机语言。</li>
+<li>机器语言指令是一种二进制代码。</li>
+<li>机器语言是机器能够直接识别的程序语言或指令代码。</li>
+<li>不同的计算机都有各自的机器语言 ，即指令系统。</li>
+<li>从使用的角度看，机器语言是最低级的语言。</li>
+</ul>
+</li>
+<li>
+<p><strong>汇编语言</strong></p>
+<ul>
+<li>第二代计算机语言。</li>
+<li>解决人类无法读懂机器语言的问题。</li>
+<li>用一些容易理解和记忆的字母、单词来代替一个特定的指令。</li>
+</ul>
+</li>
+<li>
+<p><strong>第三代计算机语言（高级语言）</strong></p>
+<ul>
+<li>分类：大体可以分为面向过程和面向对象两类。</li>
+<li>C语言是典型的面向过程的语言。Java、C++是面向对象的语言。</li>
+</ul>
+</li>
+</ul>
+<h2 id="二java技术平台介绍">二、Java技术平台介绍</h2>
+<h3 id="1-javase">1. JavaSE</h3>
+<ul>
+<li>标准版，又称J2SE。</li>
+<li>整个Java技术的核心与基础。</li>
+<li>主要用于开发桌面应用程序，比如银行软件、QQ等。</li>
+</ul>
+<h3 id="2-javaee">2. JavaEE</h3>
+<ul>
+<li>企业版，又称J2EE。</li>
+<li>提供了企业应用开发相关的完整解决方案。</li>
+<li>用于做服务器开发、网站开发。如天猫、京东等。</li>
+</ul>
+<h3 id="3-javame">3. JavaME</h3>
+<ul>
+<li>微型版，又称J2ME。</li>
+<li>一个技术和规范的集合，为移动设备提供了Java环境的开发与应用平台。</li>
+<li>主要用于控制移动设备和信息家电等有限存储的设备，用于做移动端手持设备开发。如各种app等。</li>
+</ul>
+<h2 id="三java语言的特点">三、Java语言的特点</h2>
+<ul>
+<li>简洁性</li>
+<li>面向对象</li>
+<li>健壮稳定</li>
+<li>多线程</li>
+<li>可移植性：基于JVM实现的可移植性，跨平台。</li>
+</ul>
+<p><img class="img-fluid" alt="" src="/assets/java-se-introduction/portability.png"
+   width="692" height="329" loading="lazy" />
+
+</p>
+<h2 id="四java环境">四、Java环境</h2>
+<ul>
+<li>
+<p>JDK</p>
+<ul>
+<li>Java development kit</li>
+<li>Java开发工具包</li>
+</ul>
+</li>
+<li>
+<p>JRE</p>
+<ul>
+<li>Java runtime environment</li>
+<li>Java运行时环境</li>
+</ul>
+</li>
+<li>
+<p>JVM</p>
+<ul>
+<li>Java virtual machine</li>
+<li>Java虚拟机</li>
+</ul>
+<p><img class="img-fluid" alt="" src="/assets/java-se-introduction/JVM-JDK-JRE.png"
+   width="1498" height="984" loading="lazy" />
+
+</p>
+</li>
+</ul></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-medal"></i>打赏</h5>
+        <a href="#" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-fw fa-times"></i></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item" role="presentation">
+            <a class="nav-link active" id="reward-alipay-tab" data-bs-toggle="tab" href="#reward-alipay" role="tab" aria-controls="reward-alipay" aria-selected="true">
+              <i class="fab fa-fw fa-alipay"></i>支付宝
+            </a>
+          </li><li class="nav-item" role="presentation">
+            <a class="nav-link" id="reward-wechat-tab" data-bs-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin"></i>微信
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content show active" id="reward-alipay" role="tabpanel" aria-labelledby="reward-alipay-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/alipay.jpg" loading="lazy" />
+          </div><div class="tab-pane fade post-reward-content show" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/wechat.jpg" loading="lazy" />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div><hr /><div class="post-navs d-flex mb-3 justify-content-between">
+  <div class="post-nav w-50"><div class="prev-post btn btn-sm">
+      <a href="/posts/mem-logic-of-arguments-2/">论证逻辑（二）- 因果
+</a>
+    </div></div>
+  <div class="post-nav flex-row-reverse"></div>
+</div><section class="related-posts">
+    <h3>相关文章</h3>
+    <ul class="related-posts"><li><a href="/posts/mem-logic-of-arguments-2/">论证逻辑（二）- 因果
+</a></li><li><a href="/posts/mem-logic-of-arguments-1/">论证逻辑（一）- 论证
+</a></li><li><a href="/posts/mem-formal-logic-4/">形式逻辑（四）- 概念
+</a></li><li><a href="/posts/mem-formal-logic-3/">形式逻辑（三）- 简单命题
+</a></li><li><a href="/posts/mem-formal-logic-2/">形式逻辑（二）- 联言、选言命题
+</a></li></ul>
+  </section></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
+  repo="https://github.com/phares-fung"
+  issue-term="pathname"
+  label="comment"
+  theme="github-dark"
+  crossorigin="anonymous"
+  async>
+</script></div></div>
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container"><section class="profile surface row text-center">
+  <div class="col-12 d-flex align-items-center justify-content-center"><img class="profile-avatar rounded-circle" alt="Phares Fung" src="/images/profile.webp"
+   width="1080" height="1080" loading="lazy" />
+</div>
+  <div class="col-12 profile-meta"><div class="profile-name">Phares Fung</div><div class="profile-bio">Java开发工程师</div><div class="profile-company"><i class="fas fa-fw fa-building"></i>海康威视</div><div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>四川成都</div><div class="profile-about"><i class="fas fa-fw fa-info-circle"></i><a href="/about/">个人简历</a></div></div>
+</section>
+  <section class="recent-posts row surface">
+  <h4>最近文章</h4>
+  <ul><li><a href="/posts/java-se-introduction/">Java简介
+</a></li><li><a href="/posts/mem-logic-of-arguments-2/">论证逻辑（二）- 因果
+</a></li><li><a href="/posts/mem-logic-of-arguments-1/">论证逻辑（一）- 论证
+</a></li><li><a href="/posts/mem-formal-logic-4/">形式逻辑（四）- 概念
+</a></li><li><a href="/posts/mem-formal-logic-3/">形式逻辑（三）- 简单命题
+</a></li></ul>
+</section><section class="taxonomy-categories row surface">
+      <h4>
+        <a href="/categories">分类</a>
+      </h4>
+      <div><a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="工具">
+          工具 <span class="badge rounded-pill">6</span>
+        </a><a href="/categories/%E8%80%83%E7%A0%94/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="考研">
+          考研 <span class="badge rounded-pill">6</span>
+        </a><a href="/categories/java/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Java">
+          Java <span class="badge rounded-pill">1</span>
+        </a><a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="后端">
+          后端 <span class="badge rounded-pill">1</span>
+        </a></div>
+    </section><section class="taxonomy-series row surface">
+      <h4>
+        <a href="/series">专栏</a>
+      </h4>
+      <div><a href="/series/mem/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="MEM">
+          MEM <span class="badge rounded-pill">6</span>
+        </a><a href="/series/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="软件安装">
+          软件安装 <span class="badge rounded-pill">4</span>
+        </a><a href="/series/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="博客搭建">
+          博客搭建 <span class="badge rounded-pill">2</span>
+        </a><a href="/series/java%E5%9F%BA%E7%A1%80/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Java基础">
+          Java基础 <span class="badge rounded-pill">1</span>
+        </a><a href="/series/java%E5%AD%A6%E4%B9%A0/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Java学习">
+          Java学习 <span class="badge rounded-pill">1</span>
+        </a></div>
+    </section><section class="taxonomy-tags row surface">
+      <h4>
+        <a href="/tags">标签</a>
+      </h4>
+      <div><a href="/tags/mem/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="MEM">
+          MEM <span class="badge rounded-pill">6</span>
+        </a><a href="/tags/%E9%80%BB%E8%BE%91/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="逻辑">
+          逻辑 <span class="badge rounded-pill">6</span>
+        </a><a href="/tags/git/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Git">
+          Git <span class="badge rounded-pill">2</span>
+        </a><a href="/tags/hugo/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="hugo">
+          hugo <span class="badge rounded-pill">2</span>
+        </a><a href="/tags/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="博客">
+          博客 <span class="badge rounded-pill">2</span>
+        </a><a href="/tags/java/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Java">
+          Java <span class="badge rounded-pill">1</span>
+        </a><a href="/tags/java%E7%BA%BF%E7%A8%8B/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Java线程">
+          Java线程 <span class="badge rounded-pill">1</span>
+        </a><a href="/tags/jdk1.8/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="JDK1.8">
+          JDK1.8 <span class="badge rounded-pill">1</span>
+        </a><a href="/tags/node.js/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Node.js">
+          Node.js <span class="badge rounded-pill">1</span>
+        </a><a href="/tags/threadlocal/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="ThreadLocal">
+          ThreadLocal <span class="badge rounded-pill">1</span>
+        </a></div>
+    </section></div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><a class="nav-link social-link" href="mailto:uceeso@163.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a><a class="nav-link social-link" target="_blank" href="https://github.com/phares-fung" title="GitHub" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-github"></i>
+      </a><a class="nav-link social-link" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=328123518&amp;site=qq&amp;menu=yes" title="QQ" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-qq"></i>
+      </a></nav>
+<div class="copyright mb-2">
+  Copyright © 2021-2021 Phares Fung. All Rights Reserved.
+</div>
+</footer>
+<a id="btnScrollToTop" class="btn-scroll-to-top">
+  <i class="fas fa-fw fa-chevron-circle-up fa-2x"></i>
+</a>
+</body>
+</html>

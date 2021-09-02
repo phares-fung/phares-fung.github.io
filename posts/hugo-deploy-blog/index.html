@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hugo博客部署 - Phares&#39;s blog</title><link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/images/favicons/manifest.json">
+<link rel="icon" href="/images/favicons/favicon.ico">
+<meta name="keywords" content="" />
+<meta name="description" content="" /><meta itemprop="name" content="Hugo博客部署">
+<meta itemprop="description" content="本文展示了如何将 hugo 博客部署到 github。"><meta itemprop="datePublished" content="2021-07-27T14:57:18+08:00" />
+<meta itemprop="dateModified" content="2021-07-27T14:57:18+08:00" />
+<meta itemprop="wordCount" content="356">
+<meta itemprop="keywords" content="hugo,博客," /><meta property="og:title" content="Hugo博客部署" />
+<meta property="og:description" content="本文展示了如何将 hugo 博客部署到 github。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/hugo-deploy-blog/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-27T14:57:18+08:00" />
+<meta property="article:modified_time" content="2021-07-27T14:57:18+08:00" /><meta property="og:site_name" content="Phares&#39;s blog" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo博客部署"/>
+<meta name="twitter:description" content="本文展示了如何将 hugo 博客部署到 github。"/>
+<meta data-name="palette" content="blue"><link rel="preload" href="/css/bundle.min.7fc0dcec4043950586f53c3fed9b2fbf28d6f4e4812a1e62a74b35afe159de07.css" integrity="sha256-f8Dc7EBDlQWG9Tw/7ZsvvyjW9OSBKh5ip0s1r&#43;FZ3gc=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/bundle.min.7fc0dcec4043950586f53c3fed9b2fbf28d6f4e4812a1e62a74b35afe159de07.css" integrity="sha256-f8Dc7EBDlQWG9Tw/7ZsvvyjW9OSBKh5ip0s1r&#43;FZ3gc=" crossorigin="anonymous"></noscript><script src="/js/bundle.min.2cc838447db0150b5f7744f7e45d080a22e1fcfd6810d86e9f3075136d99eca4.js" integrity="sha256-LMg4RH2wFQtfd0T35F0ICiLh/P1oENhunzB1E22Z7KQ=" crossorigin="anonymous"></script><script defer src="/js/katex.675a54ca18bdabee58c8e458c85196917e0496ce1a5b6f95b6b9cb70d01fe1d8.js" integrity="sha256-Z1pUyhi9q&#43;5YyORYyFGWkX4Els4aW2&#43;VtrnLcNAf4dg=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/css/custom.css" crossorigin="anonymous"></head><body><header><nav class="navbar navbar-expand-xl fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img class="logo" alt="Logo" src="/images/logo.jpg"
+   width="1080" height="1080" loading="lazy" />
+Phares</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-1 mb-2 mb-lg-0"><form class="search-bar d-flex ms-1" action="/search">
+  <div class="input-group input-group-sm">
+    <button class="btn btn-search disabled position-absolute left-0" type="submit" aria-label="submit"><i class="fas fa-fw fa-search"></i></button>
+    <input class="form-control rounded-pill" id="searchQuery" name="q" type="search" aria-label="Search">
+  </div>
+</form></ul><ul class="navbar-nav me-1 mb-2 mb-lg-0 me-1 ms-auto"><li class="nav-item">
+          <a class="nav-link" href="/archives/">
+            <i class="fas fa-fw fa-file-archive"></i>归档
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/categories/">
+            <i class="fas fa-fw fa-folder"></i>分类
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/series/">
+            <i class="fas fa-fw fa-columns"></i>专栏
+          </a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="/tags/">
+            <i class="fas fa-fw fa-tags"></i>标签
+          </a>
+        </li><li class="nav-item">
+  <a class="nav-link" data-bs-toggle="offcanvas" href="#offcanvasSettings" role="button"
+    aria-controls="offcanvasSettings">
+    <i class="fas fa-fw fa-sliders-h"></i> 设置
+  </a>
+</li>
+
+<div class="offcanvas offcanvas-end surface h-100" tabindex="-1" id="offcanvasSettings"
+  aria-labelledby="offcanvasSettingsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" w id="offcanvasSettingsLabel"><i class="fas fa-fw fa-sliders-h"></i> 设置</h5>
+    <a role="button" data-bs-dismiss="offcanvas" aria-label="Close">
+      <span class="fas fa-2x fa-fw fa-times"></span>
+    </a>
+  </div>
+  <div class="offcanvas-body"><section class="setting">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-adjust"></i> 模式</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="modeSwitcher">
+      </div>
+    </div>
+  </form>
+</section>
+<section class="setting">
+  <form class="font-size-switcher-form row">
+    <div class="col-auto">
+      <label for="fontSize" class="form-label"><i class="fas fa-fw fa-font"></i> 字体大小</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <input type="range" class="form-range" min="-2" max="2" id="fontSize">
+    </div>
+  </form>
+</section>
+
+<section class="setting palettes">
+  <form class="row">
+    <div class="col-auto">
+      <label><i class="fas fa-fw fa-palette"></i> 配色</label>
+    </div>
+    <div class="col-auto ms-auto">
+      <span id="btnPalette" class="btn btn-sm"><i class="fas fa-eye-dropper"></i></span>
+    </div>
+  </form>
+  <div class="container mt-2 visually-hidden" id="palettePicker">
+    <div class="btn-group"><button type="button" id="palette-blue" title="蓝色" 
+          class="btn btn-sm palette bg-blue d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-blue-gray" title="蓝灰色" 
+          class="btn btn-sm palette bg-blue-gray d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-brown" title="棕色" 
+          class="btn btn-sm palette bg-brown d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-cyan" title="青色" 
+          class="btn btn-sm palette bg-cyan d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-green" title="绿色" 
+          class="btn btn-sm palette bg-green d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-indigo" title="靛青色" 
+          class="btn btn-sm palette bg-indigo d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-orange" title="橙色" 
+          class="btn btn-sm palette bg-orange d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-pink" title="粉色" 
+          class="btn btn-sm palette bg-pink d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-purple" title="紫色" 
+          class="btn btn-sm palette bg-purple d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-red" title="红色" 
+          class="btn btn-sm palette bg-red d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-teal" title="蓝绿色" 
+          class="btn btn-sm palette bg-teal d-flex align-items-center justify-content-center">
+        </button><button type="button" id="palette-yellow" title="黄色" 
+          class="btn btn-sm palette bg-yellow d-flex align-items-center justify-content-center">
+        </button></button>
+    </div>
+  </div>
+</section></div>
+</div></ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main role="main" class="container">
+      <div class="row content">
+<div class="col-lg-8">
+  <div class="container"><nav class="row" aria-label="breadcrumb">
+  <ol class="breadcrumb surface"><li class="breadcrumb-item"><a href="/">主页</a></li><li class="breadcrumb-item"><a href="/posts/">文章</a></li><li class="breadcrumb-item active">Hugo博客部署</li></ol>
+</nav><article class="post row surface"><div class="post-panel-wrapper">
+  <div class="post-panel d-flex flex-column">
+    <a id="sidebarToggler" class="action d-none d-lg-block" role="button">
+  <i class="fas fa-fw fa-expand-alt fa-rotate-45"></i>
+</a>
+  
+    
+
+    <a class="action btn-reward" role="button" data-bs-toggle="modal" data-bs-target="#rewardModal" title="打赏">
+  <i class="fas fa-fw fa-medal"></i>
+</a>
+    <a class="action" data-bs-container="body" data-bs-toggle="popover" data-bs-html="true" data-bs-placement="bottom"
+  data-bs-trigger="focus" tabindex="0"
+  data-bs-content="&lt;a target=&#34;_blank&#34; rel=&#34;license noopener noreferrer&#34; href=&#34;https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh&#34;&gt;CC BY-NC-ND 4.0 &lt;i class=&#34;fab fa-fw fa-creative-commons&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-by&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-nc&#34;&gt;&lt;/i&gt;&lt;i class=&#34;fab fa-fw fa-creative-commons-nd&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+">
+  <i class="fas fa-fw fa-copyright"></i>
+</a>
+    <a id="btnTOC" class="fas fa-fw fa-list-alt" data-bs-toggle="offcanvas" href="#offcanvasTOC" aria-controls="offcanvasTOC" role="button">
+</a>
+  </div>
+</div>
+<h1 class="post-title my-3">Hugo博客部署
+</h1><div class="post-meta mb-3"><span class="post-date me-2">
+    <i class="fas fa-fw fa-calendar-alt"></i>2021-07-27
+  </span><span class="post-reading-time me-2">
+    <i class="fas fa-fw fa-coffee"></i>1 分钟阅读
+  </span><span class="post-taxonomies"><a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-taxonomy">工具</a><a href="/series/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-taxonomy">博客搭建</a><a href="/tags/hugo/" class="post-taxonomy">hugo</a><a href="/tags/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy">博客</a></span>
+</div>
+<div class="offcanvas offcanvas-end surface" tabindex="-1" id="offcanvasTOC" aria-labelledby="offcanvasTOCLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasTOCLabel">目录</h5>
+    <a role="button" data-bs-dismiss="offcanvas" aria-label="Close">
+      <span class="fas fa-2x fa-fw fa-times"></span>
+    </a>
+  </div>
+  <div class="offcanvas-body">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-创建仓库">1. 创建仓库</a></li>
+    <li><a href="#2-推送源文件">2. 推送源文件</a></li>
+    <li><a href="#3-推送静态文件">3. 推送静态文件</a></li>
+    <li><a href="#4-新环境使用">4. 新环境使用</a></li>
+  </ul>
+</nav>
+  </div>
+</div><div class="post-content mb-3"><p>本文展示了如何将 <code>hugo</code> 博客部署到 <code>github</code>。</p>
+<h2 id="1-创建仓库">1. 创建仓库</h2>
+<p>在github上，创建两个仓库，均为master分支：</p>
+<ol>
+<li>username.github.io   // username为你自己github的用户名，存放编译后的静态文件</li>
+<li>blog  // 名称随意，存放源文件</li>
+</ol>
+<h2 id="2-推送源文件">2. 推送源文件</h2>
+<p>在站点根目录，先将编译的静态文件夹public删除，再执行以下命令：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>git init
+<span class="ln">2</span>git remote add origin git@github.com:phares-fung/blog.git
+<span class="ln">3</span>git add -a
+<span class="ln">4</span>git commit -m &#34;first commit&#34;
+<span class="ln">5</span>git push -u origin master
+</code></pre></div><p>此时，就将站点源文件上传到github上了。</p>
+<h2 id="3-推送静态文件">3. 推送静态文件</h2>
+<p>在站点根目录，执行命令，拉取子模块username.github.io到public目录：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>git submodule add -b master git@github.com:phares-fung/phares-fung.github.io.git public
+</code></pre></div><p>之后执行命令，生成静态文件：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="ln">1</span>hugo -t m10c
+</code></pre></div><p>最后执行提交命令，将所有文件改动提交到仓库。</p>
+<p>此时可以通过git page网站 <a href="https://phares-fung.github.io/" target="_blank" rel="noopener noreferrer">https://username.github.io/</a>
+ 查看博客站点。</p>
+<h2 id="4-新环境使用">4. 新环境使用</h2>
+<ol>
+<li>安装hugo</li>
+<li>从仓库拉取源文件</li>
+<li>修改后执行生成静态文件的命令</li>
+<li>提交所有更改</li>
+<li>访问git page网站查看</li>
+</ol></div><div class="modal fade" id="rewardModal" tabindex="-1" aria-labelledby="rewardModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content surface">
+      <div class="modal-header">
+        <h5 class="modal-title" id="rewardModalLabel"><i class="fas fa-fw fa-medal"></i>打赏</h5>
+        <a href="#" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-fw fa-times"></i></a>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs mb-3" role="tablist"><li class="nav-item" role="presentation">
+            <a class="nav-link active" id="reward-alipay-tab" data-bs-toggle="tab" href="#reward-alipay" role="tab" aria-controls="reward-alipay" aria-selected="true">
+              <i class="fab fa-fw fa-alipay"></i>支付宝
+            </a>
+          </li><li class="nav-item" role="presentation">
+            <a class="nav-link" id="reward-wechat-tab" data-bs-toggle="tab" href="#reward-wechat" role="tab" aria-controls="reward-wechat" aria-selected="true">
+              <i class="fab fa-fw fa-weixin"></i>微信
+            </a>
+          </li></ul>
+        <div class="tab-content" id="rewardTabContent"><div class="tab-pane fade post-reward-content show active" id="reward-alipay" role="tabpanel" aria-labelledby="reward-alipay-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/alipay.jpg" loading="lazy" />
+          </div><div class="tab-pane fade post-reward-content show" id="reward-wechat" role="tabpanel" aria-labelledby="reward-wechat-tab">
+            <img class="img-fluid post-reward-img" src="/images/reward/wechat.jpg" loading="lazy" />
+          </div></div>
+      </div>
+    </div>
+  </div>
+</div><hr /><div class="post-navs d-flex mb-3 justify-content-between">
+  <div class="post-nav w-50"><div class="prev-post btn btn-sm">
+      <a href="/posts/hugo-set-up-blog/">Hugo搭建博客
+</a>
+    </div></div>
+  <div class="post-nav flex-row-reverse"><div class="next-post btn btn-sm">
+      <a href="/posts/mem-formal-logic-1/">形式逻辑（一）- 假言命题
+</a>
+    </div></div>
+</div><section class="related-posts">
+    <h3>相关文章</h3>
+    <ul class="related-posts"><li><a href="/posts/hugo-set-up-blog/">Hugo搭建博客
+</a></li><li><a href="/posts/java-base-java-thread-threadlocal/">Java的线程：Thread和ThreadLocal
+</a></li><li><a href="/posts/web-node-install-config-win/">Node.js安装与配置（Windows）
+</a></li><li><a href="/posts/git-config-ssh/">Git配置（SSH方式）
+</a></li><li><a href="/posts/git-install-win/">Git下载安装（Windows）
+</a></li></ul>
+  </section></article><div class="post-comments surface row"><script src="https://utteranc.es/client.js"
+  repo="https://github.com/phares-fung"
+  issue-term="pathname"
+  label="comment"
+  theme="github-dark"
+  crossorigin="anonymous"
+  async>
+</script></div></div>
+</div><aside class="col-lg-4 sidebar d-flex">
+  <div class="container"><section class="profile surface row text-center">
+  <div class="col-12 d-flex align-items-center justify-content-center"><img class="profile-avatar rounded-circle" alt="Phares Fung" src="/images/profile.webp"
+   width="1080" height="1080" loading="lazy" />
+</div>
+  <div class="col-12 profile-meta"><div class="profile-name">Phares Fung</div><div class="profile-bio">Java开发工程师</div><div class="profile-company"><i class="fas fa-fw fa-building"></i>海康威视</div><div class="profile-location"><i class="fas fa-fw fa-map-marker-alt"></i>四川成都</div><div class="profile-about"><i class="fas fa-fw fa-info-circle"></i><a href="/about/">个人简历</a></div></div>
+</section>
+  <section class="recent-posts row surface">
+  <h4>最近文章</h4>
+  <ul><li><a href="/posts/java-base-introduction/">Java入门知识
+</a></li><li><a href="/posts/mem-logic-of-arguments-2/">论证逻辑（二）- 因果
+</a></li><li><a href="/posts/mem-logic-of-arguments-1/">论证逻辑（一）- 论证
+</a></li><li><a href="/posts/mem-formal-logic-4/">形式逻辑（四）- 概念
+</a></li><li><a href="/posts/mem-formal-logic-3/">形式逻辑（三）- 简单命题
+</a></li></ul>
+</section><section class="taxonomy-categories row surface">
+      <h4>
+        <a href="/categories">分类</a>
+      </h4>
+      <div><a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="工具">
+          工具 <span class="badge rounded-pill">6</span>
+        </a><a href="/categories/%E8%80%83%E7%A0%94/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="考研">
+          考研 <span class="badge rounded-pill">6</span>
+        </a><a href="/categories/java/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Java">
+          Java <span class="badge rounded-pill">1</span>
+        </a><a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="后端">
+          后端 <span class="badge rounded-pill">1</span>
+        </a></div>
+    </section><section class="taxonomy-series row surface">
+      <h4>
+        <a href="/series">专栏</a>
+      </h4>
+      <div><a href="/series/mem/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="MEM">
+          MEM <span class="badge rounded-pill">6</span>
+        </a><a href="/series/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="软件安装">
+          软件安装 <span class="badge rounded-pill">4</span>
+        </a><a href="/series/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="博客搭建">
+          博客搭建 <span class="badge rounded-pill">2</span>
+        </a><a href="/series/java%E5%9F%BA%E7%A1%80/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Java基础">
+          Java基础 <span class="badge rounded-pill">1</span>
+        </a><a href="/series/java%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Java零基础学习">
+          Java零基础学习 <span class="badge rounded-pill">1</span>
+        </a></div>
+    </section><section class="taxonomy-tags row surface">
+      <h4>
+        <a href="/tags">标签</a>
+      </h4>
+      <div><a href="/tags/mem/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="MEM">
+          MEM <span class="badge rounded-pill">6</span>
+        </a><a href="/tags/%E9%80%BB%E8%BE%91/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="逻辑">
+          逻辑 <span class="badge rounded-pill">6</span>
+        </a><a href="/tags/git/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Git">
+          Git <span class="badge rounded-pill">2</span>
+        </a><a href="/tags/hugo/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="hugo">
+          hugo <span class="badge rounded-pill">2</span>
+        </a><a href="/tags/%E5%8D%9A%E5%AE%A2/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="博客">
+          博客 <span class="badge rounded-pill">2</span>
+        </a><a href="/tags/java%E7%BA%BF%E7%A8%8B/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Java线程">
+          Java线程 <span class="badge rounded-pill">1</span>
+        </a><a href="/tags/jdk1.8/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="JDK1.8">
+          JDK1.8 <span class="badge rounded-pill">1</span>
+        </a><a href="/tags/node.js/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="Node.js">
+          Node.js <span class="badge rounded-pill">1</span>
+        </a><a href="/tags/threadlocal/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="ThreadLocal">
+          ThreadLocal <span class="badge rounded-pill">1</span>
+        </a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AE%80%E4%BB%8B/" class="post-taxonomy rounded btn btn-sm me-2 mb-2" title="计算机简介">
+          计算机简介 <span class="badge rounded-pill">1</span>
+        </a></div>
+    </section></div>
+</aside>
+</div>
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><a class="nav-link social-link" href="mailto:uceeso@163.com" title="Email">
+      <i class="fas fa-fw fa-2x fa-envelope"></i>
+    </a><a class="nav-link social-link" target="_blank" href="https://github.com/phares-fung" title="GitHub" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-github"></i>
+      </a><a class="nav-link social-link" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=328123518&amp;site=qq&amp;menu=yes" title="QQ" rel="noopener noreferrer">
+        <i class="fa-fw fa-2x fab fa-qq"></i>
+      </a></nav>
+<div class="copyright mb-2">
+  Copyright © 2021-2021 Phares Fung. All Rights Reserved.
+</div>
+</footer>
+<a id="btnScrollToTop" class="btn-scroll-to-top">
+  <i class="fas fa-fw fa-chevron-circle-up fa-2x"></i>
+</a>
+</body>
+</html>

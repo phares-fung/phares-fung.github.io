@@ -18,16 +18,19 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="搜索"/>
 <meta name="twitter:description" content="Phares&#39; blog"/>
-<link rel="alternate" type="application/rss+xml" href="/search/index.xml" title="Phares's blog" /><meta data-name="search-index" content="/index.json"><meta data-name="palette" content="blue"><link rel=stylesheet href="/css/bundle.min.f2209a83bfa7f733540426e3abe2edccef95ac63c8535e2b3750caccec2f85ed.css" integrity="sha256-8iCag7&#43;n9zNUBCbjq&#43;LtzO&#43;VrGPIU14rN1DKzOwvhe0=" crossorigin="anonymous"><script src="/js/bundle.min.8ef42d04b6b181f947353c61222887dc043ac1405cb15b596aecca43a15d8d38.js" integrity="sha256-jvQtBLaxgflHNTxhIiiH3AQ6wUBcsVtZauzKQ6FdjTg=" crossorigin="anonymous"></script><script defer src="/js/katex.efb27591b98224b170a1dcd34b1b5ef4a9af1ae7a0ac31442742e776e52b60f9.js" integrity="sha256-77J1kbmCJLFwodzTSxte9KmvGuegrDFEJ0LnduUrYPk=" crossorigin="anonymous"></script>
+<link rel="alternate" type="application/rss+xml" href="/search/index.xml" title="Phares's blog" /><meta data-name="search-index" content="/index.json"><meta data-name="palette" content="blue"><link rel="preload" href="/css/bundle.min.7fc0dcec4043950586f53c3fed9b2fbf28d6f4e4812a1e62a74b35afe159de07.css" integrity="sha256-f8Dc7EBDlQWG9Tw/7ZsvvyjW9OSBKh5ip0s1r&#43;FZ3gc=" crossorigin="anonymous" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/bundle.min.7fc0dcec4043950586f53c3fed9b2fbf28d6f4e4812a1e62a74b35afe159de07.css" integrity="sha256-f8Dc7EBDlQWG9Tw/7ZsvvyjW9OSBKh5ip0s1r&#43;FZ3gc=" crossorigin="anonymous"></noscript><script src="/js/bundle.min.2cc838447db0150b5f7744f7e45d080a22e1fcfd6810d86e9f3075136d99eca4.js" integrity="sha256-LMg4RH2wFQtfd0T35F0ICiLh/P1oENhunzB1E22Z7KQ=" crossorigin="anonymous"></script><script defer src="/js/katex.675a54ca18bdabee58c8e458c85196917e0496ce1a5b6f95b6b9cb70d01fe1d8.js" integrity="sha256-Z1pUyhi9q&#43;5YyORYyFGWkX4Els4aW2&#43;VtrnLcNAf4dg=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/css/custom.css" crossorigin="anonymous"><script>
   window.searchResultContentWordCount = parseInt('240');
   window.searchPaginate = parseInt('8');
   window.fuseOptions = JSON.parse('{\u0022ignoreLocation\u0022:true,\u0022includeMatches\u0022:true,\u0022includeScore\u0022:true,\u0022keys\u0022:[{\u0022name\u0022:\u0022title\u0022,\u0022weight\u0022:0.8},{\u0022name\u0022:\u0022content\u0022,\u0022weight\u0022:0.5},{\u0022name\u0022:\u0022tags\u0022,\u0022weight\u0022:0.3},{\u0022name\u0022:\u0022categories\u0022,\u0022weight\u0022:0.3},{\u0022name\u0022:\u0022series\u0022,\u0022weight\u0022:0.3}],\u0022threshold\u0022:0.1}');
-</script><script src="/js/search.0a4e13928c52914d627f254371a61cbff33dd56e7ba17860b277eebdcdbdeb2c.js" integrity="sha256-Ck4TkoxSkU1ifyVDcaYcv/M91W57oXhgsnfuvc296yw=" crossorigin="anonymous"></script>
+</script><script src="/js/search.546f00c0b8d6ec308b8804051fe55e7ee49171f823d70d93ad518700bb995f6e.js" integrity="sha256-VG8AwLjW7DCLiAQFH&#43;VefuSRcfgj1w2TrVGHALuZX24=" crossorigin="anonymous"></script>
 </head><body><header><nav class="navbar navbar-expand-xl fixed-top">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <img class="logo" alt="Logo" src="/images/logo.jpg" loading="lazy">Phares</a>
+      <img class="logo" alt="Logo" src="/images/logo.jpg"
+   width="1080" height="1080" loading="lazy" />
+Phares</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -134,7 +137,7 @@
 <div class="search container">
   <form id="searchForm" class="search-form mb-3">
     <div class="input-group input-group-lg">
-      <button class="btn btn-search disabled position-absolute left-0" type="submit"><i class="fas fa-fw fa-search"></i></button>
+      <button class="btn btn-search disabled position-absolute left-0" type="submit" aria-label="submit"><i class="fas fa-fw fa-search"></i></button>
       <input class="form-control rounded-pill ps-5" name="q" type="search" aria-label="Search">
     </div>
   </form>
@@ -142,13 +145,13 @@
     <i id="loadingSpinner" class="fas fa-fw fa-spin fa-spinner"></i>
     <span id="searchStat"></span>
   </div>
-  <div id="searchResults" class="search-results mb-3"></div>
+  <div id="searchResults" class="search-results container mb-3"></div>
   <div class="text-center mb-3">
     <button class="btn d-none" type="button" id="btnLoadMore">加载更多</button>
   </div>
 </div>
 <script type="text/html" id="templateResult">
-  <div class="search-result surface" id="{{id}}">
+  <div class="search-result row surface" id="{{id}}">
     <h2 class="search-result-title mb-2">
       <a href={{permalink}}>{{title}}</a>
     </h2>
@@ -163,7 +166,7 @@
       {{/categories}}{{#tags}}
       <a href="/tags/{{#url}}{{.}}{{/url}}/" class="search-result-taxonomy">{{.}}</a>
       {{/tags}}</div>
-    <div class="search-result-content mb-3">{{{content}}}</div>
+    <div class="search-result-content mb-3">{{{#img}}}<img src="{{{img}}}"/>{{{/img}}}{{{content}}}</div>
   </div>
 </script>
 <script type="text/html" id="templateMissingKeywords">
@@ -176,23 +179,15 @@
   找到相关结果 <span class="text-accent">{{total}}</span> 个
 </script>
 </div>
-    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><li class="nav-item">
-    <a class="nav-link social-link" href="mailto:uceeso@163.com" title="Email">
+    </main><footer class="footer mt-auto py-3 text-center container"><nav class="social-links nav my-2 justify-content-center"><a class="nav-link social-link" href="mailto:uceeso@163.com" title="Email">
       <i class="fas fa-fw fa-2x fa-envelope"></i>
-    </a>
-  </li><li class="nav-item">
-      <a class="nav-link social-link" target="_blank" href="https://github.com/phares-fung" title="GitHub">
+    </a><a class="nav-link social-link" target="_blank" href="https://github.com/phares-fung" title="GitHub" rel="noopener noreferrer">
         <i class="fa-fw fa-2x fab fa-github"></i>
-      </a>
-    </li><li class="nav-item">
-      <a class="nav-link social-link" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=328123518&amp;site=qq&amp;menu=yes" title="QQ">
+      </a><a class="nav-link social-link" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=328123518&amp;site=qq&amp;menu=yes" title="QQ" rel="noopener noreferrer">
         <i class="fa-fw fa-2x fab fa-qq"></i>
-      </a>
-    </li><li class="nav-item">
-    <a class="nav-link social-link" target="_blank" href="/search/index.xml" title="RSS">
+      </a><a class="nav-link social-link" target="_blank" href="/search/index.xml" title="RSS" rel="noopener noreferrer">
       <i class="fas fa-fw fa-2x fa-rss"></i>
-    </a>
-  </li></nav>
+    </a></nav>
 <div class="copyright mb-2">
   Copyright © 2021-2021 Phares Fung. All Rights Reserved.
 </div>

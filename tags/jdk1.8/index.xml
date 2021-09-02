@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 19 Aug 2020 10:00:00 +0000</lastBuildDate><atom:link href="/tags/jdk1.8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JDK1.8在线安装（Linux）</title>
-      <link>/posts/jdk-install-online-linux/</link>
+      <link>/posts/java-base-jdk-install-online-linux/</link>
       <pubDate>Wed, 19 Aug 2020 10:00:00 +0000</pubDate>
       
-      <guid>/posts/jdk-install-online-linux/</guid>
+      <guid>/posts/java-base-jdk-install-online-linux/</guid>
       <description>&lt;p&gt;本文简单介绍了如何在Linux环境下安装 &lt;code&gt;JDK1.8&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     

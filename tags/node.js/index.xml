@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 19 Aug 2020 16:00:00 +0000</lastBuildDate><atom:link href="/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Node.js安装与配置（Windows）</title>
-      <link>/posts/node-install-config-win/</link>
+      <link>/posts/web-node-install-config-win/</link>
       <pubDate>Wed, 19 Aug 2020 16:00:00 +0000</pubDate>
       
-      <guid>/posts/node-install-config-win/</guid>
+      <guid>/posts/web-node-install-config-win/</guid>
       <description>&lt;p&gt;本文简单介绍了如何在Windows环境下安装 &lt;code&gt;Node.js&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     
